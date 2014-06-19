@@ -1,0 +1,13 @@
+{
+  "name": "00-welcome",
+  "version": "0.0.0",
+  "description": "",
+  "main": "help.js",
+  "bin": {
+    "help": "help.js",
+    "verify": "verify.js"
+  },
+  "scripts": {},
+  "author": "",
+  "license": "ISC"
+}

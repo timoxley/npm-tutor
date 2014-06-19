@@ -1,0 +1,504 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'pty.js' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 warn package.json npm-workshop@0.0.0 No description
+5 warn package.json npm-workshop@0.0.0 No repository field.
+6 warn package.json npm-workshop@0.0.0 No README data
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'pty.js', null ]
+9 verbose cache add name=undefined spec="pty.js" args=["pty.js",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'pty.js',
+10 verbose parsed url   path: 'pty.js',
+10 verbose parsed url   href: 'pty.js' }
+11 silly lockFile 97a5cb65-pty-js pty.js
+12 verbose lock pty.js /Users/timoxley/.npm/97a5cb65-pty-js.lock
+13 silly lockFile 97a5cb65-pty-js pty.js
+14 silly lockFile 97a5cb65-pty-js pty.js
+15 verbose addNamed [ 'pty.js', '' ]
+16 verbose addNamed [ null, '*' ]
+17 silly lockFile ffa6d130-pty-js pty.js@
+18 verbose lock pty.js@ /Users/timoxley/.npm/ffa6d130-pty-js.lock
+19 silly addNameRange { name: 'pty.js', range: '*', hasData: false }
+20 verbose url raw pty.js
+21 verbose url resolving [ 'https://registry.npmjs.org/', './pty.js' ]
+22 verbose url resolved https://registry.npmjs.org/pty.js
+23 info trying registry request attempt 1 at 16:37:04
+24 http GET https://registry.npmjs.org/pty.js
+25 http 200 https://registry.npmjs.org/pty.js
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Thu, 19 Jun 2014 08:37:05 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+26 silly registry.get     etag: '"CB7IUGAK7GCJK36O7VLN8ULD3"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=30',
+26 silly registry.get     'content-length': '19835',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '6547',
+26 silly registry.get     'x-served-by': 'cache-fra1226-FRA',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1403167025.610152,VS0,VE170',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'pty.js', range: '*', hasData: true }
+28 silly addNameRange versions [ 'pty.js',
+28 silly addNameRange   [ '0.0.1',
+28 silly addNameRange     '0.0.2',
+28 silly addNameRange     '0.0.3',
+28 silly addNameRange     '0.0.4',
+28 silly addNameRange     '0.0.5',
+28 silly addNameRange     '0.0.6',
+28 silly addNameRange     '0.0.6-1',
+28 silly addNameRange     '0.0.7',
+28 silly addNameRange     '0.0.8',
+28 silly addNameRange     '0.0.9',
+28 silly addNameRange     '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.1.2',
+28 silly addNameRange     '0.1.3',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.2.1',
+28 silly addNameRange     '0.2.2',
+28 silly addNameRange     '0.2.3',
+28 silly addNameRange     '0.2.4' ] ]
+29 verbose addNamed [ 'pty.js', '0.2.4' ]
+30 verbose addNamed [ '0.2.4', '0.2.4' ]
+31 silly lockFile 6378f070-pty-js-0-2-4 pty.js@0.2.4
+32 verbose lock pty.js@0.2.4 /Users/timoxley/.npm/6378f070-pty-js-0-2-4.lock
+33 silly lockFile 3cb4d8ef-pmjs-org-pty-js-pty-js-0-2-4-tgz https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz
+34 verbose lock https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz /Users/timoxley/.npm/3cb4d8ef-pmjs-org-pty-js-pty-js-0-2-4-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz',
+35 verbose addRemoteTarball   'dd337eb9433aefb34735cdc31607383bcd209e3b' ]
+36 info retry fetch attempt 1 at 16:37:06
+37 verbose fetch to= /var/folders/8n/ndny7fjs1vd60sj48ht4mkjr0000gn/T/npm-46510-k0_rqwFe/registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz
+38 http GET https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz
+39 http 200 https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz
+40 silly lockFile 3cb4d8ef-pmjs-org-pty-js-pty-js-0-2-4-tgz https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz
+41 silly lockFile 3cb4d8ef-pmjs-org-pty-js-pty-js-0-2-4-tgz https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz
+42 silly lockFile 6378f070-pty-js-0-2-4 pty.js@0.2.4
+43 silly lockFile 6378f070-pty-js-0-2-4 pty.js@0.2.4
+44 silly lockFile ffa6d130-pty-js pty.js@
+45 silly lockFile ffa6d130-pty-js pty.js@
+46 silly resolved [ { name: 'pty.js',
+46 silly resolved     description: 'Pseudo terminals for node.',
+46 silly resolved     author: { name: 'Christopher Jeffrey' },
+46 silly resolved     version: '0.2.4',
+46 silly resolved     main: './index.js',
+46 silly resolved     repository: { type: 'git', url: 'git://github.com/chjj/pty.js.git' },
+46 silly resolved     homepage: 'https://github.com/chjj/pty.js',
+46 silly resolved     bugs: { url: 'https://github.com/chjj/pty.js/issues' },
+46 silly resolved     keywords: [ 'pty', 'tty', 'terminal' ],
+46 silly resolved     scripts:
+46 silly resolved      { test: 'NODE_ENV=test mocha -R spec',
+46 silly resolved        install: 'node-gyp rebuild' },
+46 silly resolved     tags: [ 'pty', 'tty', 'terminal' ],
+46 silly resolved     dependencies: { nan: '0.7.0', extend: '~1.2.1' },
+46 silly resolved     devDependencies: { mocha: '~1.16.2' },
+46 silly resolved     gypfile: true,
+46 silly resolved     _id: 'pty.js@0.2.4',
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'dd337eb9433aefb34735cdc31607383bcd209e3b',
+46 silly resolved        tarball: 'http://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz' },
+46 silly resolved     _from: 'pty.js@',
+46 silly resolved     _npmVersion: '1.4.3',
+46 silly resolved     _npmUser: { name: 'chjj', email: 'chjjeffrey@gmail.com' },
+46 silly resolved     maintainers: [ [Object], [Object], [Object] ],
+46 silly resolved     directories: {},
+46 silly resolved     _shasum: 'dd337eb9433aefb34735cdc31607383bcd209e3b',
+46 silly resolved     _resolved: 'https://registry.npmjs.org/pty.js/-/pty.js-0.2.4.tgz' } ]
+47 info install pty.js@0.2.4 into /Users/timoxley/Projects/npm-workshop
+48 info installOne pty.js@0.2.4
+49 info /Users/timoxley/Projects/npm-workshop/node_modules/pty.js unbuild
+50 verbose tar unpack /Users/timoxley/.npm/pty.js/0.2.4/package.tgz
+51 silly lockFile 949068a5-npm-workshop-node-modules-pty-js tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js
+52 verbose lock tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js /Users/timoxley/.npm/949068a5-npm-workshop-node-modules-pty-js.lock
+53 silly lockFile d3f3b6b5-ley-npm-pty-js-0-2-4-package-tgz tar:///Users/timoxley/.npm/pty.js/0.2.4/package.tgz
+54 verbose lock tar:///Users/timoxley/.npm/pty.js/0.2.4/package.tgz /Users/timoxley/.npm/d3f3b6b5-ley-npm-pty-js-0-2-4-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 silly gunzTarPerm extractEntry package.json
+57 silly gunzTarPerm extractEntry .npmignore
+58 silly gunzTarPerm extractEntry README.md
+59 silly gunzTarPerm extractEntry LICENSE
+60 silly gunzTarPerm extractEntry index.js
+61 silly gunzTarPerm extractEntry Makefile
+62 silly gunzTarPerm extractEntry wscript
+63 silly gunzTarPerm extractEntry lib/pty.js
+64 silly gunzTarPerm extractEntry lib/pty_win.js
+65 silly gunzTarPerm extractEntry binding.gyp
+66 silly gunzTarPerm extractEntry src/unix/pty.cc
+67 silly gunzTarPerm extractEntry src/win/pty.cc
+68 silly gunzTarPerm extractEntry deps/winpty/LICENSE
+69 silly gunzTarPerm extractEntry deps/winpty/winpty.gyp
+70 silly gunzTarPerm extractEntry deps/winpty/Notes.txt
+71 silly gunzTarPerm extractEntry deps/winpty/README.rst
+72 silly gunzTarPerm extractEntry deps/winpty/agent/EventLoop.h
+73 silly gunzTarPerm extractEntry deps/winpty/agent/Agent.cc
+74 silly gunzTarPerm extractEntry deps/winpty/agent/AgentAssert.cc
+75 silly gunzTarPerm extractEntry deps/winpty/agent/AgentAssert.h
+76 silly gunzTarPerm extractEntry deps/winpty/agent/ConsoleInput.cc
+77 silly gunzTarPerm extractEntry deps/winpty/agent/ConsoleInput.h
+78 silly gunzTarPerm extractEntry deps/winpty/agent/Coord.cc
+79 silly gunzTarPerm extractEntry deps/winpty/agent/Coord.h
+80 silly gunzTarPerm extractEntry deps/winpty/agent/DsrSender.h
+81 silly gunzTarPerm extractEntry deps/winpty/agent/EventLoop.cc
+82 silly gunzTarPerm extractEntry deps/winpty/agent/Agent.h
+83 silly gunzTarPerm extractEntry deps/winpty/agent/Makefile
+84 silly gunzTarPerm extractEntry deps/winpty/agent/NamedPipe.cc
+85 silly gunzTarPerm extractEntry deps/winpty/agent/NamedPipe.h
+86 silly gunzTarPerm extractEntry deps/winpty/agent/SmallRect.cc
+87 silly gunzTarPerm extractEntry deps/winpty/agent/SmallRect.h
+88 silly gunzTarPerm extractEntry deps/winpty/agent/Terminal.cc
+89 silly gunzTarPerm extractEntry deps/winpty/agent/Terminal.h
+90 silly gunzTarPerm extractEntry deps/winpty/agent/Win32Console.cc
+91 silly gunzTarPerm extractEntry deps/winpty/agent/Win32Console.h
+92 silly gunzTarPerm extractEntry deps/winpty/agent/main.cc
+93 silly gunzTarPerm extractEntry deps/winpty/config.mk
+94 silly gunzTarPerm extractEntry deps/winpty/Makefile
+95 silly gunzTarPerm extractEntry deps/winpty/include/winpty.h
+96 silly gunzTarPerm extractEntry deps/winpty/libwinpty/Makefile
+97 silly gunzTarPerm extractEntry deps/winpty/libwinpty/winpty.cc
+98 silly gunzTarPerm extractEntry deps/winpty/misc/VkEscapeTest.cc
+99 silly gunzTarPerm extractEntry deps/winpty/misc/DebugClient.py
+100 silly gunzTarPerm extractEntry deps/winpty/misc/FormatChar.h
+101 silly gunzTarPerm extractEntry deps/winpty/misc/SelectAllTest.cc
+102 silly gunzTarPerm extractEntry deps/winpty/misc/ShowArgv.cc
+103 silly gunzTarPerm extractEntry deps/winpty/misc/ShowConsoleInput.cc
+104 silly gunzTarPerm extractEntry deps/winpty/misc/Spew.py
+105 silly gunzTarPerm extractEntry deps/winpty/misc/UnixEcho.cc
+106 silly gunzTarPerm extractEntry deps/winpty/misc/DebugServer.py
+107 silly gunzTarPerm extractEntry deps/winpty/misc/Win32Echo1.cc
+108 silly gunzTarPerm extractEntry deps/winpty/misc/Win32Echo2.cc
+109 silly gunzTarPerm extractEntry deps/winpty/misc/Win32Test1.cc
+110 silly gunzTarPerm extractEntry deps/winpty/misc/Win32Test2.cc
+111 silly gunzTarPerm extractEntry deps/winpty/misc/Win32Test3.cc
+112 silly gunzTarPerm extractEntry deps/winpty/misc/Win32Write1.cc
+113 silly gunzTarPerm extractEntry deps/winpty/misc/build_win32.sh
+114 silly gunzTarPerm extractEntry deps/winpty/shared/AgentMsg.h
+115 silly gunzTarPerm extractEntry deps/winpty/shared/Buffer.h
+116 silly gunzTarPerm extractEntry deps/winpty/shared/DebugClient.cc
+117 silly gunzTarPerm extractEntry deps/winpty/shared/DebugClient.h
+118 silly gunzTarPerm extractEntry deps/winpty/shared/c99_snprintf.h
+119 silly gunzTarPerm extractEntry deps/winpty/unix-adapter/Makefile
+120 silly gunzTarPerm extractEntry deps/winpty/unix-adapter/Shared.cc
+121 silly gunzTarPerm extractEntry deps/winpty/unix-adapter/main.cc
+122 silly gunzTarPerm extractEntry deps/winpty/configure
+123 silly lockFile 949068a5-npm-workshop-node-modules-pty-js tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js
+124 silly lockFile 949068a5-npm-workshop-node-modules-pty-js tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js
+125 silly lockFile d3f3b6b5-ley-npm-pty-js-0-2-4-package-tgz tar:///Users/timoxley/.npm/pty.js/0.2.4/package.tgz
+126 silly lockFile d3f3b6b5-ley-npm-pty-js-0-2-4-package-tgz tar:///Users/timoxley/.npm/pty.js/0.2.4/package.tgz
+127 info preinstall pty.js@0.2.4
+128 verbose readDependencies using package.json deps
+129 verbose readDependencies using package.json deps
+130 verbose cache add [ 'extend@~1.2.1', null ]
+131 verbose cache add name=undefined spec="extend@~1.2.1" args=["extend@~1.2.1",null]
+132 verbose parsed url { protocol: null,
+132 verbose parsed url   slashes: null,
+132 verbose parsed url   auth: null,
+132 verbose parsed url   host: null,
+132 verbose parsed url   port: null,
+132 verbose parsed url   hostname: null,
+132 verbose parsed url   hash: null,
+132 verbose parsed url   search: null,
+132 verbose parsed url   query: null,
+132 verbose parsed url   pathname: 'extend@~1.2.1',
+132 verbose parsed url   path: 'extend@~1.2.1',
+132 verbose parsed url   href: 'extend@~1.2.1' }
+133 verbose cache add [ 'nan@0.7.0', null ]
+134 verbose cache add name=undefined spec="nan@0.7.0" args=["nan@0.7.0",null]
+135 verbose parsed url { protocol: null,
+135 verbose parsed url   slashes: null,
+135 verbose parsed url   auth: null,
+135 verbose parsed url   host: null,
+135 verbose parsed url   port: null,
+135 verbose parsed url   hostname: null,
+135 verbose parsed url   hash: null,
+135 verbose parsed url   search: null,
+135 verbose parsed url   query: null,
+135 verbose parsed url   pathname: 'nan@0.7.0',
+135 verbose parsed url   path: 'nan@0.7.0',
+135 verbose parsed url   href: 'nan@0.7.0' }
+136 verbose cache add name="extend" spec="~1.2.1" args=["extend","~1.2.1"]
+137 verbose parsed url { protocol: null,
+137 verbose parsed url   slashes: null,
+137 verbose parsed url   auth: null,
+137 verbose parsed url   host: null,
+137 verbose parsed url   port: null,
+137 verbose parsed url   hostname: null,
+137 verbose parsed url   hash: null,
+137 verbose parsed url   search: null,
+137 verbose parsed url   query: null,
+137 verbose parsed url   pathname: '~1.2.1',
+137 verbose parsed url   path: '~1.2.1',
+137 verbose parsed url   href: '~1.2.1' }
+138 verbose addNamed [ 'extend', '~1.2.1' ]
+139 verbose addNamed [ null, '>=1.2.1-0 <1.3.0-0' ]
+140 silly lockFile 46bf6376-extend-1-2-1 extend@~1.2.1
+141 verbose lock extend@~1.2.1 /Users/timoxley/.npm/46bf6376-extend-1-2-1.lock
+142 verbose cache add name="nan" spec="0.7.0" args=["nan","0.7.0"]
+143 verbose parsed url { protocol: null,
+143 verbose parsed url   slashes: null,
+143 verbose parsed url   auth: null,
+143 verbose parsed url   host: null,
+143 verbose parsed url   port: null,
+143 verbose parsed url   hostname: null,
+143 verbose parsed url   hash: null,
+143 verbose parsed url   search: null,
+143 verbose parsed url   query: null,
+143 verbose parsed url   pathname: '0.7.0',
+143 verbose parsed url   path: '0.7.0',
+143 verbose parsed url   href: '0.7.0' }
+144 verbose addNamed [ 'nan', '0.7.0' ]
+145 verbose addNamed [ '0.7.0', '0.7.0' ]
+146 silly lockFile ff7f655c-nan-0-7-0 nan@0.7.0
+147 verbose lock nan@0.7.0 /Users/timoxley/.npm/ff7f655c-nan-0-7-0.lock
+148 silly addNameRange { name: 'extend', range: '>=1.2.1-0 <1.3.0-0', hasData: false }
+149 verbose url raw extend
+150 verbose url resolving [ 'https://registry.npmjs.org/', './extend' ]
+151 verbose url resolved https://registry.npmjs.org/extend
+152 info trying registry request attempt 1 at 16:37:08
+153 http GET https://registry.npmjs.org/extend
+154 verbose url raw nan
+155 verbose url resolving [ 'https://registry.npmjs.org/', './nan' ]
+156 verbose url resolved https://registry.npmjs.org/nan
+157 info trying registry request attempt 1 at 16:37:08
+158 verbose etag "502KZ508TWWD1N17QAE4QGK9D"
+159 http GET https://registry.npmjs.org/nan
+160 http 200 https://registry.npmjs.org/extend
+161 silly registry.get cb [ 200,
+161 silly registry.get   { date: 'Thu, 19 Jun 2014 08:37:09 GMT',
+161 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+161 silly registry.get     etag: '"7843D3UI2003WIPYQPBT23NXN"',
+161 silly registry.get     'content-type': 'application/json',
+161 silly registry.get     'cache-control': 'max-age=30',
+161 silly registry.get     'content-length': '15552',
+161 silly registry.get     'accept-ranges': 'bytes',
+161 silly registry.get     via: '1.1 varnish',
+161 silly registry.get     age: '18',
+161 silly registry.get     'x-served-by': 'cache-fra1231-FRA',
+161 silly registry.get     'x-cache': 'HIT',
+161 silly registry.get     'x-cache-hits': '1',
+161 silly registry.get     'x-timer': 'S1403167029.442166,VS0,VE0',
+161 silly registry.get     vary: 'Accept',
+161 silly registry.get     'keep-alive': 'timeout=10, max=50',
+161 silly registry.get     connection: 'Keep-Alive' } ]
+162 silly addNameRange number 2 { name: 'extend', range: '>=1.2.1-0 <1.3.0-0', hasData: true }
+163 silly addNameRange versions [ 'extend',
+163 silly addNameRange   [ '1.0.0', '1.1.0', '1.1.1', '1.1.3', '1.2.0', '1.2.1' ] ]
+164 verbose addNamed [ 'extend', '1.2.1' ]
+165 verbose addNamed [ '1.2.1', '1.2.1' ]
+166 silly lockFile a211e042-extend-1-2-1 extend@1.2.1
+167 verbose lock extend@1.2.1 /Users/timoxley/.npm/a211e042-extend-1-2-1.lock
+168 silly lockFile 6bf38195-pmjs-org-extend-extend-1-2-1-tgz https://registry.npmjs.org/extend/-/extend-1.2.1.tgz
+169 verbose lock https://registry.npmjs.org/extend/-/extend-1.2.1.tgz /Users/timoxley/.npm/6bf38195-pmjs-org-extend-extend-1-2-1-tgz.lock
+170 verbose addRemoteTarball [ 'https://registry.npmjs.org/extend/-/extend-1.2.1.tgz',
+170 verbose addRemoteTarball   'a0f5fd6cfc83a5fe49ef698d60ec8a624dd4576c' ]
+171 info retry fetch attempt 1 at 16:37:09
+172 verbose fetch to= /var/folders/8n/ndny7fjs1vd60sj48ht4mkjr0000gn/T/npm-46510-k0_rqwFe/registry.npmjs.org/extend/-/extend-1.2.1.tgz
+173 http GET https://registry.npmjs.org/extend/-/extend-1.2.1.tgz
+174 http 200 https://registry.npmjs.org/nan
+175 silly registry.get cb [ 200,
+175 silly registry.get   { date: 'Thu, 19 Jun 2014 08:37:09 GMT',
+175 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+175 silly registry.get     etag: '"2AR77MDTC9FRZIYCVIL3QPO57"',
+175 silly registry.get     'content-type': 'application/json',
+175 silly registry.get     'cache-control': 'max-age=30',
+175 silly registry.get     'content-length': '68494',
+175 silly registry.get     'accept-ranges': 'bytes',
+175 silly registry.get     via: '1.1 varnish',
+175 silly registry.get     age: '19',
+175 silly registry.get     'x-served-by': 'cache-fra1227-FRA',
+175 silly registry.get     'x-cache': 'HIT',
+175 silly registry.get     'x-cache-hits': '1',
+175 silly registry.get     'x-timer': 'S1403167029.373863,VS0,VE0',
+175 silly registry.get     vary: 'Accept',
+175 silly registry.get     'keep-alive': 'timeout=10, max=50',
+175 silly registry.get     connection: 'Keep-Alive' } ]
+176 silly lockFile 96c0c7ab-stry-npmjs-org-nan-nan-0-7-0-tgz https://registry.npmjs.org/nan/-/nan-0.7.0.tgz
+177 verbose lock https://registry.npmjs.org/nan/-/nan-0.7.0.tgz /Users/timoxley/.npm/96c0c7ab-stry-npmjs-org-nan-nan-0-7-0-tgz.lock
+178 verbose addRemoteTarball [ 'https://registry.npmjs.org/nan/-/nan-0.7.0.tgz',
+178 verbose addRemoteTarball   '3c9cc0a4e021c9cc2b699df1d94944e51c5352b9' ]
+179 info retry fetch attempt 1 at 16:37:09
+180 verbose fetch to= /var/folders/8n/ndny7fjs1vd60sj48ht4mkjr0000gn/T/npm-46510-k0_rqwFe/registry.npmjs.org/nan/-/nan-0.7.0.tgz
+181 http GET https://registry.npmjs.org/nan/-/nan-0.7.0.tgz
+182 http 200 https://registry.npmjs.org/extend/-/extend-1.2.1.tgz
+183 silly lockFile 6bf38195-pmjs-org-extend-extend-1-2-1-tgz https://registry.npmjs.org/extend/-/extend-1.2.1.tgz
+184 silly lockFile 6bf38195-pmjs-org-extend-extend-1-2-1-tgz https://registry.npmjs.org/extend/-/extend-1.2.1.tgz
+185 silly lockFile a211e042-extend-1-2-1 extend@1.2.1
+186 silly lockFile a211e042-extend-1-2-1 extend@1.2.1
+187 silly lockFile 46bf6376-extend-1-2-1 extend@~1.2.1
+188 silly lockFile 46bf6376-extend-1-2-1 extend@~1.2.1
+189 http 200 https://registry.npmjs.org/nan/-/nan-0.7.0.tgz
+190 silly lockFile 96c0c7ab-stry-npmjs-org-nan-nan-0-7-0-tgz https://registry.npmjs.org/nan/-/nan-0.7.0.tgz
+191 silly lockFile 96c0c7ab-stry-npmjs-org-nan-nan-0-7-0-tgz https://registry.npmjs.org/nan/-/nan-0.7.0.tgz
+192 silly lockFile ff7f655c-nan-0-7-0 nan@0.7.0
+193 silly lockFile ff7f655c-nan-0-7-0 nan@0.7.0
+194 silly resolved [ { name: 'extend',
+194 silly resolved     author:
+194 silly resolved      { name: 'Stefan Thomas',
+194 silly resolved        email: 'justmoon@members.fsf.org',
+194 silly resolved        url: 'http://www.justmoon.net' },
+194 silly resolved     version: '1.2.1',
+194 silly resolved     description: 'Port of jQuery.extend for Node.js',
+194 silly resolved     main: 'index',
+194 silly resolved     scripts: { test: 'node test/index.js' },
+194 silly resolved     contributors: [ [Object] ],
+194 silly resolved     keywords: [ 'extend', 'clone', 'merge' ],
+194 silly resolved     repository:
+194 silly resolved      { type: 'git',
+194 silly resolved        url: 'https://github.com/justmoon/node-extend.git' },
+194 silly resolved     dependencies: {},
+194 silly resolved     devDependencies: { tape: '~1.1.0' },
+194 silly resolved     readme: '[![Build Status][1]][2] [![dependency status][9]][10] [![dev dependency status][11]][12]\n\n# extend() for Node.js <sup>[![Version Badge][8]][3]</sup>\n\n`node-extend` is a port of the classic extend() method from jQuery. It behaves as you expect. It is simple, tried and true.\n\n## Installation\n\nThis package is available on [npm][3] as: `extend`\n\n``` sh\nnpm install extend\n```\n\n## Usage\n\n**Syntax:** extend **(** [`deep`], `target`, `object1`, [`objectN`] **)** \n\n*Extend one object with one or more others, returning the modified object.*\n\nKeep in mind that the target object will be modified, and will be returned from extend().\n\nIf a boolean true is specified as the first argument, extend performs a deep copy, recursively copying any objects it finds. Otherwise, the copy will share structure with the original object(s).\nUndefined properties are not copied. However, properties inherited from the object\'s prototype will be copied over.\n\n### Arguments\n\n* `deep` *Boolean* (optional)  \nIf set, the merge becomes recursive (i.e. deep copy).\n* `target`\t*Object*  \nThe object to extend.\n* `object1`\t*Object*  \nThe object that will be merged into the first.\n* `objectN` *Object* (Optional)  \nMore objects to merge into the first.\n\n## License\n\n`node-extend` is licensed under the [MIT License][4].\n\n## Acknowledgements\n\nAll credit to the jQuery authors for perfecting this amazing utility.\n\nPorted to Node.js by [Stefan Thomas][5] with contributions by [Jonathan Buchanan][6] and [Jordan Harband][7].\n\n[1]: https://travis-ci.org/justmoon/node-extend.png\n[2]: https://travis-ci.org/justmoon/node-extend\n[3]: https://npmjs.org/package/extend\n[4]: http://opensource.org/licenses/MIT\n[5]: https://github.com/justmoon\n[6]: https://github.com/insin\n[7]: https://github.com/ljharb\n[8]: http://vb.teelaun.ch/justmoon/node-extend.svg\n[9]: https://david-dm.org/justmoon/node-extend.png\n[10]: https://david-dm.org/justmoon/node-extend\n[11]: https://david-dm.org/justmoon/node-extend/dev-status.png\n[12]: https://david-dm.org/justmoon/node-extend#info=devDependencies\n\n',
+194 silly resolved     readmeFilename: 'README.md',
+194 silly resolved     bugs: { url: 'https://github.com/justmoon/node-extend/issues' },
+194 silly resolved     _id: 'extend@1.2.1',
+194 silly resolved     dist:
+194 silly resolved      { shasum: 'a0f5fd6cfc83a5fe49ef698d60ec8a624dd4576c',
+194 silly resolved        tarball: 'http://registry.npmjs.org/extend/-/extend-1.2.1.tgz' },
+194 silly resolved     _from: 'extend@~1.2.1',
+194 silly resolved     _npmVersion: '1.3.8',
+194 silly resolved     _npmUser: { name: 'ljharb', email: 'ljharb@gmail.com' },
+194 silly resolved     maintainers: [ [Object], [Object] ],
+194 silly resolved     directories: {},
+194 silly resolved     _shasum: 'a0f5fd6cfc83a5fe49ef698d60ec8a624dd4576c',
+194 silly resolved     _resolved: 'https://registry.npmjs.org/extend/-/extend-1.2.1.tgz' },
+194 silly resolved   { name: 'nan',
+194 silly resolved     version: '0.7.0',
+194 silly resolved     description: 'Native Abstractions for Node.js: C++ header for Node 0.8->0.12 compatibility',
+194 silly resolved     main: 'include_dirs.js',
+194 silly resolved     repository: { type: 'git', url: 'git://github.com/rvagg/nan.git' },
+194 silly resolved     contributors: [ [Object], [Object], [Object], [Object], [Object] ],
+194 silly resolved     license: 'MIT',
+194 silly resolved     bugs: { url: 'https://github.com/rvagg/nan/issues' },
+194 silly resolved     _id: 'nan@0.7.0',
+194 silly resolved     dist:
+194 silly resolved      { shasum: '3c9cc0a4e021c9cc2b699df1d94944e51c5352b9',
+194 silly resolved        tarball: 'http://registry.npmjs.org/nan/-/nan-0.7.0.tgz' },
+194 silly resolved     _from: 'nan@0.7.0',
+194 silly resolved     _npmVersion: '1.2.30',
+194 silly resolved     _npmUser: { name: 'rvagg', email: 'rod@vagg.org' },
+194 silly resolved     maintainers: [ [Object] ],
+194 silly resolved     directories: {},
+194 silly resolved     _shasum: '3c9cc0a4e021c9cc2b699df1d94944e51c5352b9',
+194 silly resolved     _resolved: 'https://registry.npmjs.org/nan/-/nan-0.7.0.tgz' } ]
+195 info install extend@1.2.1 into /Users/timoxley/Projects/npm-workshop/node_modules/pty.js
+196 info install nan@0.7.0 into /Users/timoxley/Projects/npm-workshop/node_modules/pty.js
+197 info installOne extend@1.2.1
+198 info installOne nan@0.7.0
+199 info /Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/extend unbuild
+200 info /Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/nan unbuild
+201 verbose tar unpack /Users/timoxley/.npm/extend/1.2.1/package.tgz
+202 silly lockFile d6d1373b-dules-pty-js-node-modules-extend tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/extend
+203 verbose lock tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/extend /Users/timoxley/.npm/d6d1373b-dules-pty-js-node-modules-extend.lock
+204 silly lockFile 37ec0d7a-ley-npm-extend-1-2-1-package-tgz tar:///Users/timoxley/.npm/extend/1.2.1/package.tgz
+205 verbose lock tar:///Users/timoxley/.npm/extend/1.2.1/package.tgz /Users/timoxley/.npm/37ec0d7a-ley-npm-extend-1-2-1-package-tgz.lock
+206 verbose tar unpack /Users/timoxley/.npm/nan/0.7.0/package.tgz
+207 silly lockFile 7e2da615--modules-pty-js-node-modules-nan tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/nan
+208 verbose lock tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/nan /Users/timoxley/.npm/7e2da615--modules-pty-js-node-modules-nan.lock
+209 silly lockFile 74c33318-moxley-npm-nan-0-7-0-package-tgz tar:///Users/timoxley/.npm/nan/0.7.0/package.tgz
+210 verbose lock tar:///Users/timoxley/.npm/nan/0.7.0/package.tgz /Users/timoxley/.npm/74c33318-moxley-npm-nan-0-7-0-package-tgz.lock
+211 silly gunzTarPerm modes [ '755', '644' ]
+212 silly gunzTarPerm modes [ '755', '644' ]
+213 silly gunzTarPerm extractEntry package.json
+214 silly gunzTarPerm extractEntry package.json
+215 silly gunzTarPerm extractEntry .npmignore
+216 silly gunzTarPerm extractEntry README.md
+217 silly gunzTarPerm extractEntry README.md
+218 silly gunzTarPerm extractEntry LICENSE
+219 silly gunzTarPerm extractEntry include_dirs.js
+220 silly gunzTarPerm extractEntry build/config.gypi
+221 silly gunzTarPerm extractEntry .dntrc
+222 silly gunzTarPerm extractEntry nan.h
+223 silly gunzTarPerm extractEntry index.js
+224 silly gunzTarPerm extractEntry .travis.yml
+225 silly lockFile d6d1373b-dules-pty-js-node-modules-extend tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/extend
+226 silly lockFile d6d1373b-dules-pty-js-node-modules-extend tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/extend
+227 silly lockFile 37ec0d7a-ley-npm-extend-1-2-1-package-tgz tar:///Users/timoxley/.npm/extend/1.2.1/package.tgz
+228 silly lockFile 37ec0d7a-ley-npm-extend-1-2-1-package-tgz tar:///Users/timoxley/.npm/extend/1.2.1/package.tgz
+229 info preinstall extend@1.2.1
+230 verbose readDependencies using package.json deps
+231 verbose readDependencies using package.json deps
+232 silly resolved []
+233 verbose about to build /Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/extend
+234 info build /Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/extend
+235 verbose linkStuff [ false,
+235 verbose linkStuff   false,
+235 verbose linkStuff   false,
+235 verbose linkStuff   '/Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules' ]
+236 info linkStuff extend@1.2.1
+237 verbose linkBins extend@1.2.1
+238 verbose linkMans extend@1.2.1
+239 verbose rebuildBundles extend@1.2.1
+240 info install extend@1.2.1
+241 info postinstall extend@1.2.1
+242 silly lockFile 7e2da615--modules-pty-js-node-modules-nan tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/nan
+243 silly lockFile 7e2da615--modules-pty-js-node-modules-nan tar:///Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/nan
+244 silly lockFile 74c33318-moxley-npm-nan-0-7-0-package-tgz tar:///Users/timoxley/.npm/nan/0.7.0/package.tgz
+245 silly lockFile 74c33318-moxley-npm-nan-0-7-0-package-tgz tar:///Users/timoxley/.npm/nan/0.7.0/package.tgz
+246 info preinstall nan@0.7.0
+247 verbose readDependencies using package.json deps
+248 verbose readDependencies using package.json deps
+249 silly resolved []
+250 verbose about to build /Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/nan
+251 info build /Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules/nan
+252 verbose linkStuff [ false,
+252 verbose linkStuff   false,
+252 verbose linkStuff   false,
+252 verbose linkStuff   '/Users/timoxley/Projects/npm-workshop/node_modules/pty.js/node_modules' ]
+253 info linkStuff nan@0.7.0
+254 verbose linkBins nan@0.7.0
+255 verbose linkMans nan@0.7.0
+256 verbose rebuildBundles nan@0.7.0
+257 info install nan@0.7.0
+258 info postinstall nan@0.7.0
+259 verbose about to build /Users/timoxley/Projects/npm-workshop/node_modules/pty.js
+260 info build /Users/timoxley/Projects/npm-workshop/node_modules/pty.js
+261 verbose linkStuff [ false,
+261 verbose linkStuff   false,
+261 verbose linkStuff   false,
+261 verbose linkStuff   '/Users/timoxley/Projects/npm-workshop/node_modules' ]
+262 info linkStuff pty.js@0.2.4
+263 verbose linkBins pty.js@0.2.4
+264 verbose linkMans pty.js@0.2.4
+265 verbose rebuildBundles pty.js@0.2.4
+266 verbose rebuildBundles [ 'extend', 'nan' ]
+267 info install pty.js@0.2.4
+268 verbose unsafe-perm in lifecycle true
+269 info pty.js@0.2.4 Failed to exec install script
+270 info /Users/timoxley/Projects/npm-workshop/node_modules/pty.js unbuild
+271 info preuninstall pty.js@0.2.4
+272 info uninstall pty.js@0.2.4
+273 verbose true,/Users/timoxley/Projects/npm-workshop/node_modules,/Users/timoxley/Projects/npm-workshop/node_modules unbuild pty.js@0.2.4
+274 info postuninstall pty.js@0.2.4
+275 error pty.js@0.2.4 install: `node-gyp rebuild`
+275 error Exit status 1
+276 error Failed at the pty.js@0.2.4 install script.
+276 error This is most likely a problem with the pty.js package,
+276 error not with npm itself.
+276 error Tell the author that this fails on your system:
+276 error     node-gyp rebuild
+276 error You can get their info via:
+276 error     npm owner ls pty.js
+276 error There is likely additional logging output above.
+277 error System Darwin 14.0.0
+278 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install" "pty.js"
+279 error cwd /Users/timoxley/Projects/npm-workshop
+280 error node -v v0.10.29
+281 error npm -v 1.4.14
+282 error code ELIFECYCLE
+283 verbose exit [ 1, true ]
