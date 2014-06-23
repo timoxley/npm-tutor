@@ -10,8 +10,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "mkdirp": "^0.5.0",
     "quick-tmp": "0.0.0",
     "through2": "^0.5.1",
     "ttys": "0.0.3"
+  },
+  "devDependencies": {
+    "rimraf": "^2.2.8",
+    "tape": "^2.13.3"
   }
 }

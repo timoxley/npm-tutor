@@ -11,7 +11,7 @@ var shell = process.platform === 'win32'
   : process.env.SHELL || 'bash'
 
 var exercises = fs.readdirSync(j('exercises')).map(function(d) {return j('exercises', d)}).sort()
-var data = require('data')
+var data = require('./lib/data')
 var currentExercise = data.get('current')
 
 
