@@ -1,0 +1,7 @@
+#!/usr/bin/env node
+
+var workshop = require('../workshop')
+workshop.remove(function() {
+  workshop.setNext()
+  workshop.start()
+})

@@ -1,4 +1,3 @@
 #!/bin/sh
 
-echo `node $EXERCISE_DIR/help`
-echo ''
+echo 'workshop help'

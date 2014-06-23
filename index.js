@@ -1,50 +1,68 @@
 "use strict"
 
 var spawn = require('child_process').spawn
-var j = require('path').resolve.bind(null, __dirname)
+var path = require('path')
+var j = path.resolve.bind(null, __dirname)
 var fs = require('fs')
+var tmp = require('quick-tmp')
 
-var tmp = require('quick-tmp')('npm-workshop')
+var NAME = 'npm-workshop'
+var PATH = detectPath()
 
-var shell = process.platform === 'win32'
-  ? process.env.ComSpec || 'cmd'
-  : process.env.SHELL || 'bash'
-
-var exercises = fs.readdirSync(j('exercises')).map(function(d) {return j('exercises', d)}).sort()
-var data = require('./lib/data')
-var currentExercise = data.get('current')
-
-
-exercises[]
+var Workshop = require('./lib/workshop')
 
 module.exports = function(dir, done) {
-  if (!dir) dir = tmp()
-  mkdir(dir)
+  var workingDir = dir || tmp(NAME)()
+  var options = {
+    name: NAME,
+    workingDir: workingDir,
+    exerciseDir: j('exercises'),
+  }
+  var workshop = Workshop(options)
+  workshop.getCurrent()
+  start(workshop, done)
+}
+
+function start(workshop, done) {
+  var shell = detectShell()
 
   var args = []
+
   if (shell.match('bash')) args = ['--init-file', j('bin/npm-workshop-prelude.sh')]
 
   var child = spawn(shell, args, {
-    env: augmentEnv(process.env),
+    env: augmentEnv(process.env, workshop),
     stdio: 'inherit',
-    cwd: dir
+    cwd: workshop.workingDir
   }).on('exit', done)
 }
 
-function augmentEnv(env) {
-  env.PATH = [j('node_modules/.bin'), env.PATH].join(':')
+function augmentEnv(env, workshop) {
+  env[PATH] = [j('node_modules/.bin'), j('aliases'), env.PATH].join(':')
   env.ZDOTDIR = j('bin')
-  env.EXERCISE_DIR = j('exercises/00-welcome')
+  env.WORKSHOP_NAME = workshop.name
+  env.WORKSHOP_WORKING_DIR = workshop.workingDir
+  env.WORKSHOP_EXERCISE_DIR = workshop.exerciseDir
+  env.WORKSHOP_BIN_DIR = workshop.binDir
   return env
 }
 
-function mkdir(dir) {
-  try {
-    fs.mkdirSync(dir)
-    return true
-  } catch (e) {
-    if (e.code !== 'EEXISTS') throw e
-    return false
-  }
+function detectShell() {
+  return process.platform === 'win32'
+    ? process.env.ComSpec || 'cmd'
+    : process.env.SHELL || 'bash'
 }
 
+function detectPath() {
+  var PATH = 'PATH'
+  // windows calls it's path "Path" usually, but this is not guaranteed.
+  if (process.platform === "win32") {
+    PATH = "Path"
+    Object.keys(process.env).forEach(function (e) {
+      if (e.match(/^PATH$/i)) {
+        PATH = e
+      }
+    })
+  }
+  return PATH
+}
