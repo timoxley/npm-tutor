@@ -51,13 +51,24 @@ function teardown() {
   setup.dir && rimraf.sync(setup.dir)
 }
 
+test('accepts/creates a working dir', function(t) {
+  setup()
+  var workingDir = tmpDir()
+  t.ok(!fs.existsSync(workingDir))
+  var workshop = Workshop({name: 'test-workshop', exerciseDir: setup.dir, workingDir: workingDir})
+  t.equal(workshop.workingDir, workingDir)
+  t.ok(fs.existsSync(workingDir))
+  t.end()
+  teardown()
+})
+
 test('creates/restores working dir', function(t) {
   setup()
-  var workshop1 = Workshop('test-workshop', setup.dir)
+  var workshop1 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
   var dir1 = workshop1.workingDir
   t.ok(dir1)
 
-  var workshop2 = Workshop('test-workshop', setup.dir)
+  var workshop2 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
   var dir2 = workshop2.workingDir
   t.equal(dir2, dir1)
 
@@ -67,11 +78,11 @@ test('creates/restores working dir', function(t) {
 
 test('restores current exercise', function(t) {
   setup()
-  var workshop1 = Workshop('test-workshop', setup.dir)
+  var workshop1 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
   var current1 = workshop1.getCurrent()
   t.ok(current1)
 
-  var workshop2 = Workshop('test-workshop', setup.dir)
+  var workshop2 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
   var current2 = workshop2.getCurrent()
   t.deepEqual(current2, current1)
   t.end()
