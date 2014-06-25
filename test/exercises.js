@@ -45,24 +45,24 @@ test('can list all exercises in order', function(t) {
   writePkg(pkgDir3, pkg3)
 
   var exercises = Exercises(dir)
-  t.comment('ensure numeric indices work')
+  // ensure numeric indices work
   t.equal(exercises[0].name, pkg1.name)
   t.equal(exercises[1].name, pkg2.name)
   t.equal(exercises[2].name, pkg3.name)
 
-  t.comment('ensure length is correct')
+  // ensure length is correct
   t.equal(exercises.length, 3)
 
-  t.comment('ensure sequence is added')
+  // ensure sequence is added
   t.equal(exercises[pkg1.name].sequence, 0)
   t.equal(exercises[pkg2.name].sequence, 1)
   t.equal(exercises[pkg3.name].sequence, 2)
 
-  t.comment('ensure pkg dir exists')
+  // ensure pkg dir exists
   t.equal(exercises[pkg1.name].dir, pkgDir1)
   t.equal(exercises[pkg2.name].dir, pkgDir2)
   t.equal(exercises[pkg3.name].dir, pkgDir3)
 
-  rimraf.sync(dir)
   t.end()
+  rimraf.sync(dir)
 })

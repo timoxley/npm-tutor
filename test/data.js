@@ -1,13 +1,19 @@
+"use strict"
+
 var test = require('tape')
 var rimraf = require('rimraf')
 
 var Data = require('../lib/data')
+var tmpDir = require('quick-tmp')('test-data')
 
-var data = Data('test-data')
+var data = undefined
 
 function setup() {
+  data = Data('test-data', tmpDir())
+}
+
+function teardown() {
   rimraf.sync(data.dir)
-  data = Data('test-data')
 }
 
 test('get all data empty = {}', function(t) {
@@ -15,6 +21,7 @@ test('get all data empty = {}', function(t) {
   var value = data.get()
   t.deepEqual(value, {})
   t.end()
+  teardown()
 })
 
 test('set return value == data', function(t) {
@@ -22,6 +29,7 @@ test('set return value == data', function(t) {
   var value = {saved: true}
   t.deepEqual(data.set('value', value), value)
   t.end()
+  teardown()
 })
 
 test('set + get all data', function(t) {
@@ -32,6 +40,7 @@ test('set + get all data', function(t) {
   data.set('value', expected.value)
   t.deepEqual(data.get(), expected)
   t.end()
+  teardown()
 })
 
 test('get data by key', function(t) {
@@ -40,12 +49,14 @@ test('get data by key', function(t) {
   data.set('value', expected)
   t.deepEqual(data.get('value'), expected)
   t.end()
+  teardown()
 })
 
 test('get undefined data', function(t) {
   setup()
   t.deepEqual(data.get('value'), undefined)
   t.end()
+  teardown()
 })
 
 test('get data set default', function(t) {
@@ -56,6 +67,7 @@ test('get data set default', function(t) {
   t.deepEqual(data.get('value'), expected, 'should have set value')
   t.deepEqual(data.get('value', {doNotUse: true}), expected, 'should not use default if already set')
   t.end()
+  teardown()
 })
 
 test('set data by key function', function(t) {
@@ -71,6 +83,7 @@ test('set data by key function', function(t) {
     saved: 2
   })
   t.end()
+  teardown()
 })
 
 test('clear data', function(t) {
@@ -82,4 +95,5 @@ test('clear data', function(t) {
   t.deepEqual(data.get(), {})
   t.deepEqual(data.get('value'), undefined)
   t.end()
+  teardown()
 })

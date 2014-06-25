@@ -31,9 +31,13 @@ var data, exercises;
 
 function setup() {
   var dir = setup.dir = tmp()
-  var pkgDir1 = resolve(dir, '01-first')
-  var pkgDir2 = resolve(dir, '02-second')
-  var pkgDir3 = resolve(dir, '03-third')
+  var dataDir = resolve(dir, 'data')
+  mkdirp.sync(dataDir)
+  var exerciseDir = resolve(dir, 'exercises')
+  mkdirp.sync(exerciseDir)
+  var pkgDir1 = resolve(exerciseDir, '01-first')
+  var pkgDir2 = resolve(exerciseDir, '02-second')
+  var pkgDir3 = resolve(exerciseDir, '03-third')
   var pkg1 = {
     name: "first"
   }
@@ -47,8 +51,8 @@ function setup() {
   writePkg(pkgDir1, pkg1)
   writePkg(pkgDir2, pkg2)
   writePkg(pkgDir3, pkg3)
-  exercises = Exercises(dir)
-  data = Data('test-data')
+  exercises = Exercises(exerciseDir)
+  data = Data('test-data', dataDir)
   data.clear()
 }
 
