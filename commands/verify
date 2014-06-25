@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+var spawn = require('child_process').spawn
+var workshop = require('../workshop')
+var messages = require('../messages')
+
+workshop.verify(process.argv.slice(2), function(err, valid) {
+  if (err) throw err
+  if (!valid) return console.log(messages['fail'])
+  else console.log(messages['success'])
+  var toDo = workshop.toDo()
+
+  if (!toDo.length) console.log(messages['complete'])
+  else workshop.next(function(err) {
+    spawn('help', [], {
+      env: process.env,
+      stdio: 'inherit'
+    })
+  })
+})

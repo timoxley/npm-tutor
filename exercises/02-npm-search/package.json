@@ -1,5 +1,5 @@
 {
-  "name": "00-welcome",
+  "name": "01-npm-info",
   "version": "0.0.0",
   "description": "",
   "main": "help.js",
@@ -7,9 +7,7 @@
     "help": "help.js",
     "verify": "verify.js"
   },
-  "scripts": {
-    "postinstall": "(cd $WORKSHOP_WORKING_DIR && pwd)"
-  },
+  "scripts": {},
   "author": "",
   "license": "ISC"
 }

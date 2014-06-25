@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+var workshop = require('../workshop')
+var messages = require('../messages')
+
+workshop.forwardExec('help', process.argv.slice(2), function(err) {
+  if (err) throw err
+  console.log(messages['help'])
+  console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
+})

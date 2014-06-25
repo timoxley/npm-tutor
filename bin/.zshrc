@@ -1,2 +1,2 @@
-echo $ZDOTDIR/npm-workshop-prelude.sh
+source ~/.zshrc
 source $ZDOTDIR/npm-workshop-prelude.sh

@@ -1,21 +1,20 @@
 "use strict"
 
-var spawn = require('child_process').spawn
-var path = require('path')
-var j = path.resolve.bind(null, __dirname)
 var fs = require('fs')
-var tmp = require('quick-tmp')
+var path = require('path')
+var spawn = require('child_process').spawn
 
-var NAME = 'npm-workshop'
+var j = path.resolve.bind(null, __dirname)
+var pkg = require('./package.json')
+var NAME = process.title = pkg.name
 var PATH = detectPath()
 
 var Workshop = require('./lib/workshop')
 
 module.exports = function(dir, done) {
-  var workingDir = dir || tmp(NAME)()
   var options = {
     name: NAME,
-    workingDir: workingDir,
+    workingDir: dir,
     exerciseDir: j('exercises'),
   }
   var workshop = Workshop(options)
@@ -38,12 +37,19 @@ function start(workshop, done) {
 }
 
 function augmentEnv(env, workshop) {
-  env[PATH] = [j('node_modules/.bin'), j('aliases'), env.PATH].join(':')
+  env[PATH] = [commandsPath, j('node_modules/.bin'), env[PATH]].join(':')
   env.ZDOTDIR = j('bin')
   env.WORKSHOP_NAME = workshop.name
-  env.WORKSHOP_WORKING_DIR = workshop.workingDir
+  env.WORKSHOP_DIR = env.WORKSHOP_WORKING_DIR = workshop.workingDir
   env.WORKSHOP_EXERCISE_DIR = workshop.exerciseDir
   env.WORKSHOP_BIN_DIR = workshop.binDir
+  // ensure ctrl + arrow keys etc continue functioning
+  var inputrc = env.INPUTRC
+  if (!inputrc) {
+    if (fs.existsSync('/etc/inputrc')) inputrc = '/etc/inputrc'
+    if (fs.existsSync(env.HOME + '/.inputrc')) inputrc = '~/.inputrc'
+  }
+  env.INPUTRC = inputrc
   return env
 }
 
@@ -66,3 +72,5 @@ function detectPath() {
   }
   return PATH
 }
+var commandsPath = module.exports.commandsPath = j('commands')
+module.exports.detectPath = detectPath

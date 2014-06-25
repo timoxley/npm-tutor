@@ -6,9 +6,6 @@ We have set up a temporary environment for you in /tmp/asdasd
 * type skip to skip a question
 * type help to repeat the question!
 
-skip this question
-
-> skip
 
 to verify an answer type 'verify "your answer"' where "your answer" is your answer
 

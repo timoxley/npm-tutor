@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+
+var spawn = require('child_process').spawn
+var workshop = require('../workshop')
+var messages = require('../messages')
+
+console.log(messages['skip'], workshop.getCurrent().name)
+workshop.skip(function() {
+  spawn('help', [], {
+    env: process.env,
+    stdio: 'inherit'
+  })
+})
