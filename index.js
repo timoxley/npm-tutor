@@ -27,7 +27,7 @@ function start(workshop, done) {
 
   var args = []
 
-  if (shell.match('bash')) args = ['--init-file', j('bin/npm-workshop-prelude.sh')]
+  if (shell.match('bash')) args = ['--init-file', j('bin/prelude.sh')]
 
   var child = spawn(shell, args, {
     env: augmentEnv(process.env, workshop),
