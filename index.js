@@ -6,6 +6,10 @@ var spawn = require('child_process').spawn
 
 var j = path.resolve.bind(null, __dirname)
 var pkg = require('./package.json')
+
+var detectPath = require('./util').detectPath
+var detectShell = require('./util').detectShell
+
 var NAME = process.title = pkg.name
 var PATH = detectPath()
 
@@ -53,24 +57,4 @@ function augmentEnv(env, workshop) {
   return env
 }
 
-function detectShell() {
-  return process.platform === 'win32'
-    ? process.env.ComSpec || 'cmd'
-    : process.env.SHELL || 'bash'
-}
-
-function detectPath() {
-  var PATH = 'PATH'
-  // windows calls it's path "Path" usually, but this is not guaranteed.
-  if (process.platform === "win32") {
-    PATH = "Path"
-    Object.keys(process.env).forEach(function (e) {
-      if (e.match(/^PATH$/i)) {
-        PATH = e
-      }
-    })
-  }
-  return PATH
-}
 var commandsPath = module.exports.commandsPath = j('commands')
-module.exports.detectPath = detectPath
