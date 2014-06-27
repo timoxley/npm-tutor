@@ -1,3 +1,26 @@
 #!/usr/bin/env node
 
-require('./skip')
+var spawn = require('child_process').spawn
+var workshop = require('../workshop')
+var messages = require('../messages')
+var help = require('./help')
+
+function next() {
+  if (!workshop.isComplete(workshop.getCurrent().name)) {
+    console.log(messages['skip'], workshop.getCurrent().name)
+  }
+
+  workshop.next(function(err) {
+    if (err) throw err
+    help.done = function() {
+      console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
+    }
+    help()
+  })
+}
+
+if (!module.parent) {
+  next.apply(this, process.argv.slice(2))
+}
+
+module.exports = next

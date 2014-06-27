@@ -3,8 +3,19 @@
 var workshop = require('../workshop')
 var messages = require('../messages')
 
-workshop.forwardExec('help', process.argv.slice(2), function(err) {
-  if (err) throw err
-  console.log(messages['help'])
-  console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
-})
+function help() {
+  var args = [].slice.call(arguments)
+  workshop.forwardExec('help', args, function() {
+    if (help.done) help.done()
+  })
+}
+
+if (!module.parent) {
+  help.done = function() {
+    console.log(messages['help'])
+    console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
+  }
+  help.apply(this, process.argv.slice(2))
+}
+
+module.exports = help

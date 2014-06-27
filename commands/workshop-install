@@ -2,6 +2,12 @@
 
 var workshop = require('../workshop')
 
-workshop.start(function(err) {
-  if (err) throw err
-})
+function install() {
+  workshop.start()
+}
+
+if (!module.parent) {
+  install.apply(this, process.argv.slice(2))
+}
+
+module.exports = install

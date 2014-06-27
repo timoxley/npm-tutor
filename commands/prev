@@ -1,6 +1,20 @@
 #!/usr/bin/env node
 
 var workshop = require('../workshop')
+var help = require('./help')
+var messages = require('../messages')
 
-workshop.prev()
+function prev() {
+  workshop.prev(function(err) {
+    help.done = function() {
+      console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
+    }
+    help()
+  })
+}
 
+if (!module.parent) {
+  prev.apply(this, process.argv.slice(2))
+}
+
+module.exports = prev
