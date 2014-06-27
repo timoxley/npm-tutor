@@ -1,2 +1,3 @@
 node_modules
 bin/.zcompdump*
+npm-debug.log

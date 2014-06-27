@@ -1,13 +1,12 @@
 {
-  "name": "01-npm-info",
+  "name": "npm-workshop-welcome",
   "version": "0.0.0",
-  "description": "",
+  "description": "welcome: the npm-workshop hello world.",
   "main": "help.js",
   "bin": {
     "help": "help.js",
     "verify": "verify.js"
   },
-  "scripts": {},
-  "author": "",
+  "author": "Tim Oxley",
   "license": "ISC"
 }

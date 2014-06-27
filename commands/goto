@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+var spawn = require('child_process').spawn
+var workshop = require('../workshop')
+var messages = require('../messages')
+var help = require('./help')
+
+function goto(name) {
+  if (!workshop.isComplete(workshop.getCurrent().name)) {
+    console.log(messages['skip'], workshop.getCurrent().name)
+  }
+  workshop.go(name)
+}
+
+if (!module.parent) {
+  goto.apply(this, process.argv.slice(2))
+}
+
+module.exports = goto

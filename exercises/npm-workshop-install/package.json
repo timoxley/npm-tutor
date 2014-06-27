@@ -1,0 +1,22 @@
+{
+  "name": "npm-workshop-install",
+  "version": "0.0.0",
+  "description": "npm install: learn about the npm install command",
+  "main": "help.js",
+  "bin": {
+    "help": "help.js",
+    "verify": "verify.js"
+  },
+  "exercises": [
+    "exercises/install",
+    "exercises/save"
+  ],
+  "dependencies": {
+    "workshop-exercises": "*"
+  },
+  "scripts": {
+    "postinstall": "node ./help.js"
+  },
+  "author": "Tim Oxley",
+  "license": "ISC"
+}

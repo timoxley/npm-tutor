@@ -1,0 +1,13 @@
+{
+  "name": "npm-workshop-info",
+  "version": "0.0.0",
+  "description": "npm info: learn about the npm info command",
+  "main": "help.js",
+  "bin": {
+    "help": "help.js",
+    "verify": "verify.js"
+  },
+  "scripts": {},
+  "author": "Tim Oxley",
+  "license": "ISC"
+}
