@@ -10,7 +10,7 @@ var resolve = require('path').resolve
 
 var tmpDir = require('quick-tmp')('test-exercises')
 
-var Exercises = require('../lib/exercises')
+var Exercises = require('workshop-exercises')
 
 function tmp() {
   var dir = tmpDir()
@@ -44,7 +44,7 @@ test('can list all exercises in order', function(t) {
   writePkg(pkgDir2, pkg2)
   writePkg(pkgDir3, pkg3)
 
-  var exercises = Exercises(dir)
+  var exercises = Exercises([pkgDir1, pkgDir2, pkgDir3])
   // ensure numeric indices work
   t.equal(exercises[0].name, pkg1.name)
   t.equal(exercises[1].name, pkg2.name)

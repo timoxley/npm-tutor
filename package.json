@@ -8,7 +8,8 @@
     "test": "tape test/*.js",
     "start": "node bin/npm-workshop.js",
     "prestart": "npm run prepublish",
-    "prepublish": "npm install lib/workshop-exercises"
+    "pretest": "npm run prepublish",
+    "prepublish": "npm install lib/workshop-*"
   },
   "author": "",
   "license": "ISC",
@@ -16,7 +17,9 @@
     "exercises/npm-workshop-install"
   ],
   "bundledDependencies": [
-    "workshop-exercises"
+    "workshop-exercises",
+    "workshop-data",
+    "workshop-sequence"
   ],
   "dependencies": {
     "ansi": "^0.3.0",
@@ -27,6 +30,7 @@
     "quick-tmp": "0.0.0",
     "terminal-menu": "^0.3.2",
     "workshop-exercises": "*",
+    "workshop-data": "*",
     "xtend": "^3.0.0"
   },
   "devDependencies": {

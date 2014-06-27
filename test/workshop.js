@@ -45,6 +45,7 @@ function setup() {
   writePkg(pkgDir1, pkg1)
   writePkg(pkgDir2, pkg2)
   writePkg(pkgDir3, pkg3)
+  setup.list = [pkgDir1, pkgDir2, pkgDir3]
 }
 
 function teardown() {
@@ -55,7 +56,7 @@ test('accepts/creates a working dir', function(t) {
   setup()
   var workingDir = tmpDir()
   t.ok(!fs.existsSync(workingDir))
-  var workshop = Workshop({name: 'test-workshop', exerciseDir: setup.dir, workingDir: workingDir})
+  var workshop = Workshop({name: 'test-workshop', exerciseList: setup.list, workingDir: workingDir})
   t.equal(workshop.workingDir, workingDir)
   t.ok(fs.existsSync(workingDir))
   t.end()
@@ -64,11 +65,11 @@ test('accepts/creates a working dir', function(t) {
 
 test('creates/restores working dir', function(t) {
   setup()
-  var workshop1 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
+  var workshop1 = Workshop({name: 'test-workshop', exerciseList: setup.list})
   var dir1 = workshop1.workingDir
   t.ok(dir1)
 
-  var workshop2 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
+  var workshop2 = Workshop({name: 'test-workshop', exerciseList: setup.list})
   var dir2 = workshop2.workingDir
   t.equal(dir2, dir1)
 
@@ -78,11 +79,11 @@ test('creates/restores working dir', function(t) {
 
 test('restores current exercise', function(t) {
   setup()
-  var workshop1 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
+  var workshop1 = Workshop({name: 'test-workshop', exerciseList: setup.list})
   var current1 = workshop1.getCurrent()
   t.ok(current1)
 
-  var workshop2 = Workshop({name: 'test-workshop', exerciseDir: setup.dir})
+  var workshop2 = Workshop({name: 'test-workshop', exerciseList: setup.list})
   var current2 = workshop2.getCurrent()
   t.deepEqual(current2, current1)
   t.end()

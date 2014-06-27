@@ -3,7 +3,7 @@
 var test = require('tape')
 var rimraf = require('rimraf')
 
-var Data = require('../lib/data')
+var Data = require('workshop-data')
 var tmpDir = require('quick-tmp')('test-data')
 
 var data = undefined

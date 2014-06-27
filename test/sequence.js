@@ -10,9 +10,9 @@ var resolve = require('path').resolve
 
 var tmpDir = require('quick-tmp')('test-exercises')
 
-var Exercises = require('../lib/exercises')
-var Data = require('../lib/data')
-var Sequence = require('../lib/sequence')
+var Exercises = require('workshop-exercises')
+var Data = require('workshop-data')
+var Sequence = require('workshop-sequence')
 
 function tmp() {
   var dir = tmpDir()
@@ -51,7 +51,7 @@ function setup() {
   writePkg(pkgDir1, pkg1)
   writePkg(pkgDir2, pkg2)
   writePkg(pkgDir3, pkg3)
-  exercises = Exercises(exerciseDir)
+  exercises = Exercises([pkgDir1, pkgDir2, pkgDir3])
   data = Data('test-data', dataDir)
   data.clear()
 }
