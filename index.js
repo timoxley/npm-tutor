@@ -55,6 +55,7 @@ function augmentEnv(env, workshop) {
   env.WORKSHOP_SUBTITLE = workshop.subtitle
   env.WORKSHOP_WIDTH = workshop.width
   env.WORKSHOP_DIR = env.WORKSHOP_WORKING_DIR = workshop.workingDir
+  env.WORKSHOP_DATA_DIR = env.WORKSHOP_DATA_DIR = workshop.dataDir
   env.WORKSHOP_EXERCISE_LIST = JSON.stringify(workshop.exerciseList)
   env.WORKSHOP_BIN_DIR = workshop.binDir
   // ensure ctrl + arrow keys etc continue functioning

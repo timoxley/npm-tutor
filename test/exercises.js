@@ -10,7 +10,7 @@ var resolve = require('path').resolve
 
 var tmpDir = require('quick-tmp')('test-exercises')
 
-var Exercises = require('workshop-exercises')
+var Exercises = require('workshop-pkg-exercises')
 
 function tmp() {
   var dir = tmpDir()

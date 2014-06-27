@@ -15,6 +15,7 @@ var workshop = Workshop({
   subtitle: env.WORKSHOP_SUBTITLE,
   width: env.WORKSHOP_WIDTH,
   workingDir: env.WORKSHOP_WORKING_DIR,
+  dataDir: env.WORKSHOP_DATA_DIR,
   exerciseList: JSON.parse(exerciseList)
 })
 

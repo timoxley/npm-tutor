@@ -17,7 +17,7 @@
     "exercises/npm-workshop-install"
   ],
   "bundledDependencies": [
-    "workshop-exercises",
+    "workshop-pkg-exercises",
     "workshop-data",
     "workshop-sequence"
   ],
