@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+var spawn = require('child_process').spawn
+var workshop = require('../workshop')
+var messages = require('../messages')
+var help = require('./help')
+
+function reset() {
+  var args = [].slice.call(arguments)
+  workshop.forwardExec('chapter-reset', args, function() {
+    workshop.unsetComplete(workshop.getCurrent().name)
+    console.log('Chapter reset', workshop.getCurrent().name)
+  })
+}
+
+if (!module.parent) {
+  reset.apply(this, process.argv.slice(2))
+}
+
+module.exports = reset

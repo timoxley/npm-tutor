@@ -3,9 +3,9 @@
 ## Help
 
 verify <answer> verify your answer
-next            go to the next question
-prev            go to the previous question
-goto <number>   go to a particular question
+next            go to the next chapter
+prev            go to the previous chapter
+goto <number>   go to a particular chapter
 menu            display menu
 help            repeat question & display this help
 exit            quit

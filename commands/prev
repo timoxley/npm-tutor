@@ -5,12 +5,7 @@ var help = require('./help')
 var messages = require('../messages')
 
 function prev() {
-  workshop.prev(function(err) {
-    help.done = function() {
-      console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
-    }
-    help()
-  })
+  workshop.prev()
 }
 
 if (!module.parent) {

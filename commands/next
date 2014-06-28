@@ -6,17 +6,7 @@ var messages = require('../messages')
 var help = require('./help')
 
 function next() {
-  if (!workshop.isComplete(workshop.getCurrent().name)) {
-    console.log(messages['skip'], workshop.getCurrent().name)
-  }
-
-  workshop.next(function(err) {
-    if (err) throw err
-    help.done = function() {
-      console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
-    }
-    help()
-  })
+  workshop.next()
 }
 
 if (!module.parent) {

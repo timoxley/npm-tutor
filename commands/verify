@@ -9,15 +9,8 @@ function verify() {
     if (err) throw err
     if (!valid) return console.log(messages['fail'])
     else console.log(messages['success'])
-    var toDo = workshop.toDo()
 
-    if (!toDo.length) console.log(messages['complete'])
-    else workshop.next(function(err) {
-      spawn('help', [], {
-        env: process.env,
-        stdio: 'inherit'
-      })
-    })
+    if (workshop.allComplete()) return console.log(messages['complete'])
   })
 }
 

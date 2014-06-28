@@ -2,17 +2,19 @@
   "name": "npm-workshop-install",
   "version": "0.0.0",
   "description": "npm install: learn about the npm install command",
-  "main": "help.js",
+  "main": "index.js",
   "bin": {
     "help": "help.js",
-    "verify": "verify.js"
+    "verify": "verify.js",
+    "chapter-reset": "commands/restart"
   },
   "exercises": [
     "exercises/install",
-    "exercises/save"
+    "exercises/install-save"
   ],
   "dependencies": {
-    "workshop-exercises": "*"
+    "workshop-exercises": "*",
+    "workshop-assertion-message": "*"
   },
   "scripts": {
     "postinstall": "node ./help.js"

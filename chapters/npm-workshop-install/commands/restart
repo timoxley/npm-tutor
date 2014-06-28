@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+var path = require('path')
+var spawn = require('child_process').spawn
+
+var exercises = require('../')
+exercises.data.clear()
+
+console.log('Chapter restarted!')
+
+spawn('help', [], {
+  env: process.env,
+  stdio: 'inherit'
+})

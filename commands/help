@@ -13,7 +13,7 @@ function help() {
 if (!module.parent) {
   help.done = function() {
     console.log(messages['help'])
-    console.log(messages['remaining'], workshop.toDo().length, workshop.exercises.length)
+    console.log(messages['remaining'], workshop.incomplete().length, workshop.exercises.length)
   }
   help.apply(this, process.argv.slice(2))
 }
