@@ -4,7 +4,7 @@
   "description": "welcome: the npm-workshop hello world.",
   "main": "help.js",
   "bin": {
-    "help": "help.js",
+    "helpme": "help.js",
     "verify": "verify.js"
   },
   "author": "Tim Oxley",

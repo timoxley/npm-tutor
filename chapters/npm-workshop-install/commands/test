@@ -2,11 +2,20 @@
 
 set -e
 chapter-reset
-`current-dir`/solution
-verify
-`current-dir`/solution
-verify
-`current-dir`/solution
-`current-dir`/verify
+
+`workshop-exercise dir`/solution
+`workshop-exercise dir`/verify
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext --silent
+
+`workshop-exercise dir`/solution
+`workshop-exercise dir`/verify
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext --silent
+
+`workshop-exercise dir`/solution
+`workshop-exercise dir`/verify
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext --silent
 
 chapter-reset

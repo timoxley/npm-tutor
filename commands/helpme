@@ -5,7 +5,7 @@ var messages = require('../messages')
 
 function help() {
   var args = [].slice.call(arguments)
-  workshop.forwardExec('help', args, function() {
+  workshop.forwardExec('helpme', args, function() {
     if (help.done) help.done()
   })
 }

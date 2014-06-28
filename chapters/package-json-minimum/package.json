@@ -4,7 +4,7 @@
   "description": "npm info: learn about the npm info command",
   "main": "help.js",
   "bin": {
-    "help": "help.js",
+    "helpme": "help.js",
     "verify": "verify.js"
   },
   "scripts": {},

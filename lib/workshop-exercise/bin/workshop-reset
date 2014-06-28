@@ -9,7 +9,6 @@ exercises.data.clear()
 console.log('Chapter restarted!')
 
 spawn('helpme', [], {
-  env: process.env,
   stdio: 'inherit'
 }).on('exit', function(code) {
   process.exit(code)

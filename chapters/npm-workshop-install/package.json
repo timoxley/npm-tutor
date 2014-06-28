@@ -4,7 +4,7 @@
   "description": "npm install: learn about the npm install command",
   "main": "index.js",
   "bin": {
-    "help": "help.js",
+    "helpme": "help.js",
     "self": "commands/self",
     "verify": "commands/verify",
     "chapter-reset": "commands/restart",

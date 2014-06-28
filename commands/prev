@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var workshop = require('../workshop')
-var help = require('./help')
 var messages = require('../messages')
 
 function prev() {

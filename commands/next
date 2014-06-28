@@ -3,7 +3,6 @@
 var spawn = require('child_process').spawn
 var workshop = require('../workshop')
 var messages = require('../messages')
-var help = require('./help')
 
 function next() {
   workshop.next()
