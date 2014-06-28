@@ -9,7 +9,13 @@ var exercise = exercises.getCurrent()
 spawn(path.resolve(exercise.dir, 'verify'), process.argv.slice(2), {
   stdio: 'inherit',
 }).on('exit', function(code) {
-  if (code !== 0) return process.exit(code)
+  if (code !== 0) {
+    console.log('\nFailure!')
+    return process.exit(code)
+  }
+
+  console.log('\nSuccess!')
+
   exercises.setComplete(exercise.name)
 
   if (exercises.allComplete()) {

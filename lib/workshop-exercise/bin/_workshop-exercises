@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var exercises = require(process.argv[2])
+
+var isSilent = (function() {
+  var before = process.argv
+  process.argv = process.argv.filter(function(arg) {
+    return arg !== '--silent'
+  })
+  return (before.length !== process.argv.length)
+})()
+
+function out() {
+  if (isSilent) return
+  console.log.apply(console, arguments)
+}
+
+if (process.argv[3] === '--help') {
+  out(Object.keys(exercises).join('\n'))
+  return
+}
+
+if (!process.argv[3]) {
+  out(JSON.stringify(exercises, null, 2))
+  return
+}
+
+var target = exercises[process.argv[3]]
+if (typeof target == 'function') {
+  out(target.apply(exercises, process.argv.slice(4)))
+} else {
+  out(target)
+}

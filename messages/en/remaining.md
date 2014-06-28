@@ -1,1 +1,1 @@
-%d of %d exercises left.
+%d of %d chapters left.

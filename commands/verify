@@ -8,7 +8,6 @@ function verify() {
   workshop.verify(args, function(err, valid) {
     if (err) throw err
     if (!valid) {
-      console.log(messages['fail'])
       process.exit(1)
       return
     }

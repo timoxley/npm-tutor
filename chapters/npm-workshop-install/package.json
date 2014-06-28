@@ -5,9 +5,9 @@
   "main": "index.js",
   "bin": {
     "help": "help.js",
-    "verify": "verify.js",
+    "self": "commands/self",
+    "verify": "commands/verify",
     "chapter-reset": "commands/restart",
-    "current-dir": "commands/current-dir",
     "chapter-test": "commands/test"
   },
   "exercises": [
@@ -17,6 +17,7 @@
   ],
   "dependencies": {
     "workshop-exercises": "*",
+    "workshop-exercise": "*",
     "workshop-assertion-message": "*"
   },
   "scripts": {

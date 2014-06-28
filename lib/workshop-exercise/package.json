@@ -1,0 +1,17 @@
+{
+  "name": "workshop-exercise",
+  "version": "0.0.0",
+  "main": "index.js",
+  "bin": {
+    "workshop-exercise": "bin/workshop-exercise",
+    "_workshop-exercise": "bin/_workshop-exercise",
+    "workshop-exercises": "bin/workshop-exercises",
+    "_workshop-exercises": "bin/_workshop-exercises",
+    "workshop-verify": "bin/workshop-verify"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

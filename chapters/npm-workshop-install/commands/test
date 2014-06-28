@@ -2,14 +2,11 @@
 
 set -e
 chapter-reset
-echo "STARTING: " `current-dir`/solution
 `current-dir`/solution
 verify
-echo "STARTING: " `current-dir`/solution
 `current-dir`/solution
 verify
-echo "STARTING: " `current-dir`/solution
 `current-dir`/solution
-verify
+`current-dir`/verify
 
 chapter-reset
