@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 "use strict"
 
 var fs = require('fs')
@@ -20,4 +22,5 @@ var pkg = require(targetPackage)
 
 assert.ok(pkg.dependencies, 'package.json needs dependencies: ' + inspect(pkg))
 assert.ok(pkg.dependencies['once'], 'package.json does not have the once dependency: ' + inspect(pkg))
-assert.ok(fs.existsSync(target), 'The once package must actually be installed!')
+
+require('../install/verify')

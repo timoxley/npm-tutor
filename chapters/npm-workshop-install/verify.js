@@ -6,7 +6,7 @@ var spawn = require('child_process').spawn
 var exercises = require('./')
 var exercise = exercises.getCurrent()
 
-spawn(process.execPath, [path.resolve(exercise.dir, 'verify.js')], {
+spawn(path.resolve(exercise.dir, 'verify'), process.argv.slice(2), {
   stdio: 'inherit',
 }).on('exit', function(code) {
   if (code !== 0) return process.exit(code)
