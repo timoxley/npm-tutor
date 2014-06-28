@@ -18,6 +18,6 @@ spawn(path.resolve(exercise.dir, 'verify'), process.argv.slice(2), {
   exercises.setNext()
   spawn('help', [], {stdio: 'inherit'})
   .on('exit', function(code) {
-    process.exit(1)
+    process.exit(0)
   })
 })

@@ -7,9 +7,12 @@ function verify() {
   var args = [].slice.call(arguments)
   workshop.verify(args, function(err, valid) {
     if (err) throw err
-    if (!valid) return console.log(messages['fail'])
-    else console.log(messages['success'])
-
+    if (!valid) {
+      console.log(messages['fail'])
+      process.exit(1)
+      return
+    }
+    console.log(messages['success'])
     if (workshop.allComplete()) return console.log(messages['complete'])
   })
 }
