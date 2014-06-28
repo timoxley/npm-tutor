@@ -12,7 +12,8 @@
   },
   "exercises": [
     "exercises/install",
-    "exercises/install-save"
+    "exercises/install-save",
+    "exercises/install-save-dev"
   ],
   "dependencies": {
     "workshop-exercises": "*",
