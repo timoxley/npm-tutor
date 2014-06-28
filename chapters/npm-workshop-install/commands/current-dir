@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+var exercises = require('../')
+console.log(exercises.getCurrent().dir)

@@ -6,7 +6,9 @@
   "bin": {
     "help": "help.js",
     "verify": "verify.js",
-    "chapter-reset": "commands/restart"
+    "chapter-reset": "commands/restart",
+    "current-dir": "commands/current-dir",
+    "chapter-test": "commands/test"
   },
   "exercises": [
     "exercises/install",

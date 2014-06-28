@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+chapter-reset
+echo "STARTING: " `current-dir`/solution
+`current-dir`/solution
+verify
+echo "STARTING: " `current-dir`/solution
+`current-dir`/solution
+verify
+echo "STARTING: " `current-dir`/solution
+`current-dir`/solution
+verify
+
+chapter-reset
