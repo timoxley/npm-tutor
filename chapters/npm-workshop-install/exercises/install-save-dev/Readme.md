@@ -1,5 +1,5 @@
 # npm install --save-dev #
 
-Use npm install --save-dev to install the 'once' module in the current directory.
+Save tape as a development dependency.
 
 Run verify to proceed!

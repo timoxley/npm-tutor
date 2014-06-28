@@ -1,5 +1,5 @@
 # npm install --save #
 
-Use npm install --save to install the 'once' module in the current directory.
+Specify once as a dependency in the current package.json.
 
 Run verify to proceed!
