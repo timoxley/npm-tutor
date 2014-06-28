@@ -9,7 +9,10 @@ function reset() {
   var args = [].slice.call(arguments)
   workshop.forwardExec('chapter-reset', args, function() {
     workshop.unsetComplete(workshop.getCurrent().name)
-    console.log('Chapter reset', workshop.getCurrent().name)
+    workshop.clear(function() {
+      console.log(messages['chapter-reset'], workshop.getCurrent().name)
+      help()
+    })
   })
 }
 
