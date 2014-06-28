@@ -12,6 +12,11 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "dependencies": {
+    "workshop-exercises": "*",
+    "workshop-sequence": "*",
+    "workshop-data": "*"
+  },
   "author": "",
   "license": "ISC"
 }
