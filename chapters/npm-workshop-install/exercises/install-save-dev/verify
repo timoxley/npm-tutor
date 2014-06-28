@@ -21,8 +21,8 @@ assert.ok(fs.existsSync(targetPackage), 'Where is your package.json?')
 var pkg = require(targetPackage)
 
 assert.ok(pkg.devDependencies, 'package.json needs devDependencies: ' + inspect(pkg))
-assert.ok(pkg.devDependencies['tape'], 'package.json does not have tape as a development dependency: ' + inspect(pkg))
+assert.ok(pkg.devDependencies['tape'], 'package.json does not have tape as a development dependency: \n' + inspect(pkg))
 assert.ok(fs.existsSync(target), 'The tape package must actually be installed!')
-assert.ok(pkg.dependencies['tape'], 'package.json must not have tape as a regular dependency: ' + inspect(pkg))
+assert.ok(pkg.dependencies['tape'], 'package.json must not have tape as a regular dependency: \n' + inspect(pkg))
 
 require('../install-save/verify')
