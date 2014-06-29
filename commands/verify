@@ -11,6 +11,7 @@ function verify() {
       process.exit(1)
       return
     }
+    console.log()
     console.log(messages['success'])
     if (workshop.allComplete()) return console.log(messages['complete'])
   })
