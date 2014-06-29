@@ -8,14 +8,4 @@ chapter-reset
 workshop-exercises setComplete `workshop-exercise name` --silent
 workshop-exercises setNext --silent
 
-`workshop-exercise dir`/solution
-`workshop-exercise dir`/verify
-workshop-exercises setComplete `workshop-exercise name` --silent
-workshop-exercises setNext --silent
-
-`workshop-exercise dir`/solution
-`workshop-exercise dir`/verify
-workshop-exercises setComplete `workshop-exercise name` --silent
-workshop-exercises setNext --silent
-
 chapter-reset
