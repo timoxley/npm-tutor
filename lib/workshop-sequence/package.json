@@ -7,5 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "afterfn": "^2.0.0",
+    "beforefn": "^2.2.0"
+  }
 }
