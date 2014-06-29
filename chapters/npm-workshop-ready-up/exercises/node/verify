@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var getLatest = require('./latest-node')
+
+var assert = require('assert')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+console.info('Getting latest stable version of node...')
+
+getLatest(function(err, latest) {
+  assert.ifError(err)
+  var current = process.versions.node
+  assert.equal(current, latest, "It saddens me to inform you that " + current + " is not the latest stable version of node.\n\n The latest stable version is " + latest)
+  console.info('\nThis is great! You are using the latest stable version of node: ' + current)
+})
