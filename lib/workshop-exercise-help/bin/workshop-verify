@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+`workshop-exercise dir`/verify $@
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext --silent
+[[ $(workshop-exercises allComplete) == "true" ]] && exit 0
+npm-run helpme
+exit 1

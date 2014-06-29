@@ -21,6 +21,8 @@
   "bundledDependencies": [
     "workshop-pkg-exercises",
     "workshop-exercises",
+    "workshop-exercise",
+    "workshop-exercise-help",
     "workshop-data",
     "workshop-sequence",
     "workshop-assertion-message"
@@ -37,6 +39,7 @@
     "workshop-assertion-message": "*",
     "workshop-data": "*",
     "workshop-exercise": "*",
+    "workshop-exercise-help": "*",
     "workshop-exercises": "*",
     "workshop-pkg-exercises": "*",
     "workshop-sequence": "*",
