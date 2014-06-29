@@ -15,7 +15,8 @@
   "license": "ISC",
   "exercises": [
     "chapters/npm-workshop-package-json-intro",
-    "chapters/npm-workshop-install"
+    "chapters/npm-workshop-install",
+    "chapters/npm-workshop-discovery"
   ],
   "bundledDependencies": [
     "workshop-pkg-exercises",
