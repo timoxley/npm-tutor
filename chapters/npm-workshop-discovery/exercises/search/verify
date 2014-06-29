@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assert')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var submission = process.argv[2]
+assert(submission, 'You need to pass a package name to verify!')
+
+var names = require('./csvtojson.json')
+
+assert(names.indexOf(submission) !== -1, "Dang, "+submission+" doesn't look like a csv to json package to me! Try something more obvious.")
+
+console.info('\nAhh nice, '+submission+' looks like it might work. Thanks.')

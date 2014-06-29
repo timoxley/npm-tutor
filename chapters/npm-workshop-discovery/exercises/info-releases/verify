@@ -1,0 +1,62 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assert')
+var spawn = require('child_process').spawn
+var split = require('split2')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+var packages = ['optimist', 'minimist', 'commander']
+
+var submittedName = process.argv[2]
+var submittedCount = process.argv[3]
+
+assert(submittedName, 'You need to pass a package name to verify!')
+assert(submittedCount, 'You need to also pass the number of releases for this package to verify!')
+assert.ok(packages.indexOf(submittedName) !== -1, 'Huh? "'+submittedName+'" isn\'t even a package we\'re interested in. \n\nWe are only interested in these packages: ' + packages.join(', '))
+
+console.info('Calculating correctness...')
+
+var counts = {}
+var pending = packages.length
+packages.forEach(function(item) {
+  releases(item, function(err, count) {
+    if (err) return done(err)
+    counts[item] = count
+    if (!--pending) return done(null, counts)
+  })
+})
+
+function releases(name, fn) {
+  var count = 0
+  spawn('npm', ['info', name, 'versions', '--no-color'])
+  .stdout.pipe(split())
+  .on('data', function(line) {
+    count++
+  })
+  .on('end', function() {
+    return fn(null, count)
+  })
+  .on('error', function(err) {
+    return fn(err)
+  })
+}
+
+function done(err, counts) {
+  if (err) throw err
+  var max = 0
+  var maxName = ''
+  for (var key in counts) {
+    if (counts[key] > max) {
+      max = counts[key]
+      maxName = key
+    }
+  }
+  assert.equal(submittedName, maxName, 'Another listed package has more releases.')
+  assert.equal(submittedCount, max, "Oops, that's not the right number of releases.")
+  console.info("\nYour calculations are correct! "+submittedName+" does have the most releases. That does not mean it's necessarily better though.")
+}
+

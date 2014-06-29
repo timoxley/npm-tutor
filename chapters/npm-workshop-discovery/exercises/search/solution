@@ -1,0 +1,3 @@
+#!/bin/sh
+
+verify csv2json
