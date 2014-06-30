@@ -1,12 +1,12 @@
 # node ready
 
-This workshop requires the latest version of node.
+This workshop requires the latest stable version of node.
 
 ## Task
 
-Update to the latest version of node!
+Update to the latest stable version of node!
 
-Run `verify` to verify.
+Run `verify` to verify you are running the latest version.
 
 ## Hint
 
