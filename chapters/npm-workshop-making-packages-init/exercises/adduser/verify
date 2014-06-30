@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var assert = require('assert')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var exec = require('child_process').exec
+
+console.info('Verifying you exist...')
+exec('npm whoami', function(err, whoami) {
+  assert.ifError(err)
+  whoami = whoami.trim()
+  assert.notEqual(whoami, "Not authed.  Run 'npm adduser'", "It does not appear that you're registered or logged in.")
+  console.info('\nGreat work %s, we found you.\n', whoami)
+})

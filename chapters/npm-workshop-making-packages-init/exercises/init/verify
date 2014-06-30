@@ -1,0 +1,50 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assertf')
+var mkdirp = require('mkdirp')
+var rimraf = require('rimraf')
+var spawn = require('child_process').spawn
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var quicktmp = require('quick-tmp')('npm-workshop-workflow')
+var dir = quicktmp()
+mkdirp.sync(dir)
+
+var pkgPath = path.resolve(process.cwd(), 'package.json')
+assert.ok(fs.existsSync(pkgPath), 'Uhh, did you generate a package json?')
+
+var dirname = path.basename(path.dirname(pkgPath))
+
+try {
+  var submitted = JSON.parse(fs.readFileSync(pkgPath))
+} catch (err) {
+  assert.ifError(err)
+}
+
+var typicalInit = {
+  "name": dirname,
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+console.info('\nChecking instructions were followed correctly...\n')
+assert.equal(submitted.name, typicalInit.name, 'Did you accept the npm init defaults?\n"name" should be %s.',  typicalInit.name)
+assert.equal(submitted.version, typicalInit.version, 'Did you accept the npm init defaults?\n"version" should be %s.', typicalInit.version)
+assert.equal(submitted.main, typicalInit.main, 'Did you accept the npm init defaults?\n"main" should be %s.', typicalInit.main)
+assert.deepEqual(submitted.scripts, typicalInit.scripts, 'Did you accept the npm init defaults?\n"scripts" should be %j.', typicalInit.scripts)
+
+assert.ok(submitted.author, 'Did you accept the npm init defaults?\n You should have an author!')
+assert.ok(submitted.license, 'Did you accept the npm init defaults?\n You should have license!')
+
+console.info('\nInstructions followed correctly. Good.\n')

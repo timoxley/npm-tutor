@@ -16,11 +16,18 @@ function inspect(obj) {
 var target = path.resolve(process.cwd(), 'node_modules/once')
 var targetPackage = path.resolve(process.cwd(), 'package.json')
 
+console.info('Checking your package.json exists...')
 assert.ok(fs.existsSync(targetPackage), 'Where is your package.json?')
 
 var pkg = require(targetPackage)
 
+console.info('Checking your package.json has dependencies...')
 assert.ok(pkg.dependencies, 'package.json needs dependencies: ' + inspect(pkg))
+
+console.info('Checking your package.json has "once" as a dependency...')
 assert.ok(pkg.dependencies['once'], 'package.json does not have the once dependency: ' + inspect(pkg))
 
-require('../install/verify')
+console.info('Checking once is installed...')
+var target = path.resolve(process.cwd(), 'node_modules/once')
+assert.ok(fs.existsSync(target), 'The once package must be installed!')
+console.info('\nGreat stuff. You set up \'once\' as a dependency.')

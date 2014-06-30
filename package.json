@@ -15,7 +15,8 @@
   "license": "ISC",
   "exercises": [
     "chapters/npm-workshop-ready-up",
-    "chapters/npm-workshop-package-json-intro",
+    "chapters/npm-workshop-making-packages-init",
+    "chapters/npm-workshop-making-packages-dependencies",
     "chapters/npm-workshop-discovery",
     "chapters/npm-workshop-semver"
   ],
