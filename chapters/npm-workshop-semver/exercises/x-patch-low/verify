@@ -1,0 +1,19 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var assert = require('assert')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var semver = require('semver')
+
+var submission = process.argv[2].toLowerCase()
+
+var answer = '1.7.0'
+assert.ok(semver.satisfies(answer, '1.7.x'))
+assert.ok(!semver.satisfies('1.6.9', '1.7.x'))
+
+assert.equal(submission, answer, submission + " is incorrect.")
+
+console.info('Correct! The lowest valid version in the 1.7.x range is 1.7.0')
+

@@ -1,0 +1,29 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var assert = require('assert')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+
+var semver = require('semver')
+
+var submissions = process.argv.slice(2)
+
+submissions = submissions
+.map(function(submission) {
+  return submission.trim().toLowerCase()
+})
+.filter(function(submission, index, submissions) {
+  return submissions.lastIndexOf(submission) === index
+})
+
+var target = '>=2.0.0-0 <3.0.0-0'
+
+assert.equal(submissions.length, 3, 'I need 3 different, equivalent variations!')
+
+submissions.forEach(function(submission) {
+  assert.deepEqual(semver.toComparators(submission), semver.toComparators(target), submission + ' is not equivalent to ' + target)
+})
+
+console.info('\nYOU ARE A SEMVER GOD.\n')

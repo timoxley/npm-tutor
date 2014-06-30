@@ -16,8 +16,8 @@
   "exercises": [
     "chapters/npm-workshop-ready-up",
     "chapters/npm-workshop-package-json-intro",
-    "chapters/npm-workshop-install",
-    "chapters/npm-workshop-discovery"
+    "chapters/npm-workshop-discovery",
+    "chapters/npm-workshop-semver"
   ],
   "bundledDependencies": [
     "workshop-pkg-exercises",

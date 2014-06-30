@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var assert = require('assert')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var submission = process.argv[2].toLowerCase()
+
+assert.equal(submission, 'no', "Incorrect!")
+console.info('\nCorrect! The *only* valid version for the range 1.1.1 is 1.1.1\n')

@@ -1,3 +1,3 @@
-export PS1='npmworkshop> '
+export PS1='npm-workshop> '
 clear
 menu

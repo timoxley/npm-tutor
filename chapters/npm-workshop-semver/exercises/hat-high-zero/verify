@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var assert = require('assert')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var semver = require('semver')
+
+var submission = process.argv[2].toLowerCase()
+
+var answer = '0.4.0'
+assert.ok(!semver.satisfies(answer, '^0.3.0'))
+
+assert.equal(submission, answer, submission + " is incorrect.")
+
+console.info('\nCorrect! The lowest *invalid* version in the ^0.3.0 range is 0.4.0\n')
+
+console.info("\n^0.3.0 will match all versions in the range: ", semver.toComparators('^0.3.0')[0].join(' '))
+
+console.info('\nRemember: For versions less than 1.0.0, hat (^) ranges behave like tilde ranges.\n')
+
+console.info('\nThis can be confusing so it is best to simply skip 0.x versions .\n')

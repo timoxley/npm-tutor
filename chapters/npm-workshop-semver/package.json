@@ -1,0 +1,39 @@
+{
+  "name": "npm-workshop-semver",
+  "version": "0.0.0",
+  "description": "semver quiz: understand semantic versioning!",
+  "main": "index.js",
+  "bin": {
+    "helpme": "help.js",
+    "self": "commands/self",
+    "verify": "commands/verify",
+    "chapter-reset": "commands/restart",
+    "chapter-test": "commands/test"
+  },
+  "exercises": [
+    "exercises/exact",
+    "exercises/major-low",
+    "exercises/major-high",
+    "exercises/x-patch-low",
+    "exercises/x-patch-high",
+    "exercises/tilde-low",
+    "exercises/tilde-high",
+    "exercises/hat-low",
+    "exercises/hat-high",
+    "exercises/hat-low-zero",
+    "exercises/hat-high-zero",
+    "exercises/star",
+    "exercises/summary"
+  ],
+  "dependencies": {
+    "semver": "^2.3.1",
+    "workshop-assertion-message": "*",
+    "workshop-exercise": "*",
+    "workshop-exercise-help": "*"
+  },
+  "scripts": {
+    "postinstall": "node ./help.js"
+  },
+  "author": "Tim Oxley",
+  "license": "ISC"
+}

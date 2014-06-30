@@ -1,0 +1,58 @@
+#!/bin/bash
+
+set -e
+chapter-reset
+
+`workshop-exercise dir`/verify no
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 2.0.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 3.0.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 1.7.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 1.8.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 1.2.7
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 1.3.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 3.0.2
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 4.0.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 0.3.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 0.4.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 0.0.0
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+`workshop-exercise dir`/verify 2 ~2 ^2
+workshop-exercises setComplete `workshop-exercise name` --silent
+workshop-exercises setNext
+
+chapter-reset
