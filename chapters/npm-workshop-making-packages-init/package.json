@@ -13,7 +13,7 @@
   "exercises": [
     "exercises/adduser",
     "exercises/init",
-    "exercises/init-config"
+    "exercises/init-config-author"
   ],
   "dependencies": {
     "assertf": "^1.0.0",

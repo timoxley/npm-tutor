@@ -8,7 +8,10 @@ npm config set init.author.name "Your Name"
 npm config set init.author.email "me@websites.com"
 ```
 
-You can also set `init.author.url` to specify a personal home page URL.
+Other settings available are
+
+* `init.author.url` to specify a personal home page URL and
+* `init.license` to set the default license.
 
 ## Task
 
