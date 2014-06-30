@@ -18,6 +18,7 @@
     "split2": "^0.1.2",
     "workshop-assertion-message": "*",
     "workshop-exercise": "*",
+    "workshop-exercise-help": "*",
     "workshop-exercises": "*"
   },
   "scripts": {
