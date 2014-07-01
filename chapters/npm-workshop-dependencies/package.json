@@ -1,0 +1,36 @@
+{
+  "name": "npm-workshop-dependencies",
+  "version": "0.0.0",
+  "description": "inspecting dependencies: learn how dependencies work",
+  "main": "index.js",
+  "bin": {
+    "helpme": "help.js",
+    "self": "commands/self",
+    "verify": "commands/verify",
+    "chapter-reset": "commands/restart",
+    "chapter-test": "commands/test"
+  },
+  "exercises": [
+    "exercises/install",
+    "exercises/root-1",
+    "exercises/root-2",
+    "exercises/ls",
+    "exercises/ls-json",
+    "exercises/ls-global"
+  ],
+  "dependencies": {
+    "assertf": "^1.0.0",
+    "bl": "^0.8.2",
+    "cpr": "^0.3.0",
+    "mkdirp": "^0.5.0",
+    "workshop-assertion-message": "*",
+    "workshop-exercise": "*",
+    "workshop-exercise-help": "*",
+    "workshop-exercises": "*"
+  },
+  "scripts": {
+    "postinstall": "node setup.js && node help.js"
+  },
+  "author": "Tim Oxley",
+  "license": "ISC"
+}

@@ -1,0 +1,20 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var path = require('path')
+var exec = require('child_process').exec
+var assert = require('assertf')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var root = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'npmroot')
+var answer = path.resolve(root, 'a/node_modules')
+
+exec('npm root', {
+  cwd: path.resolve(root, 'a/b/c')
+}, function(err, submission) {
+  assert.ifError(err)
+  submission = submission.trim()
+  assert.equal(submission, answer, 'Oops, that\'s not right.\nUnder that regime, packages install into %s.\n', submission)
+  console.info('\nYou did it. Good work!\n')
+})
