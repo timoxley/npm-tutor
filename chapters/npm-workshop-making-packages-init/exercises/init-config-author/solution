@@ -1,3 +1,5 @@
 #!/bin/sh
 
+#npm config set init.author.name "Your Name"
+#npm config set init.author.email "me@websites.com"
 yes '' | npm init
