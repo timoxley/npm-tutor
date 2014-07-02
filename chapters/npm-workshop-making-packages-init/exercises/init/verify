@@ -44,7 +44,4 @@ assert.equal(submitted.version, typicalInit.version, 'Did you accept the npm ini
 assert.equal(submitted.main, typicalInit.main, 'Did you accept the npm init defaults?\n"main" should be %s.', typicalInit.main)
 assert.deepEqual(submitted.scripts, typicalInit.scripts, 'Did you accept the npm init defaults?\n"scripts" should be %j.', typicalInit.scripts)
 
-assert.ok(submitted.author, 'Did you accept the npm init defaults?\n You should have an author!')
-assert.ok(submitted.license, 'Did you accept the npm init defaults?\n You should have license!')
-
 console.info('\nInstructions followed correctly. Good.\n')

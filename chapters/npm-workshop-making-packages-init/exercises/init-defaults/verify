@@ -26,8 +26,6 @@ try {
   assert.ifError(err)
 }
 
-
-
 console.info('\nChecking instructions were followed correctly...\n')
 
 var pending = 2
@@ -65,7 +63,6 @@ function done(err, results) {
   assert.equal(submitted.main, typicalInit.main, 'Did you accept the npm init defaults?\n"main" should be %s.', typicalInit.main)
   assert.deepEqual(submitted.scripts, typicalInit.scripts, 'Did you accept the npm init defaults?\n"scripts" should be %j.', typicalInit.scripts)
 
-  assert.ok(submitted.license, 'Did you accept the npm init defaults?\n You should have license!')
   console.info('\nGood work!\n')
 
 console.info('\nPlease contineue to enjoy these personalized package.json files courtesy of `npm init`. Thanks `npm init`\n')
