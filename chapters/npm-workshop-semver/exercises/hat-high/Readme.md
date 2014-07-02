@@ -1,6 +1,7 @@
-# semver quiz – tilde high-end
+# semver quiz – hat high-end
 
-What is the next highest **invalid** version of `graceful-fs` in `glob@4.0.3`?
+What is the lowest **invalid** version of `graceful-fs` in `glob@4.0.3`
+greater than version `3.0.2`?
 
 `verify <x.y.z>` to proceed.
 

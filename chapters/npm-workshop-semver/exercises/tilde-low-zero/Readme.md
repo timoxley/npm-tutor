@@ -1,4 +1,4 @@
-# semver quiz – tilde zero ranges
+# semver quiz – tilde low-end zero ranges
 
 What is the lowest valid version of `forever-agent` in `request@2.20.0`?
 

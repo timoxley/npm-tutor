@@ -1,4 +1,4 @@
-# semver quiz – tilde zero ranges
+# semver quiz – hat low-end in zero range
 
 What is the lowest valid version of `minimatch` in `glob@4.0.3`?
 
