@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-discovery",
   "version": "0.0.0",
-  "description": "npm discovery: find packages",
+  "description": "package discovery: find packages",
   "main": "index.js",
   "bin": {
     "helpme": "help.js",

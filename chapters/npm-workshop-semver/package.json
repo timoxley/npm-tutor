@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-semver",
   "version": "0.0.0",
-  "description": "semver quiz: understand semantic versioning!",
+  "description": "semver: understand semantic versioning",
   "main": "index.js",
   "bin": {
     "helpme": "help.js",

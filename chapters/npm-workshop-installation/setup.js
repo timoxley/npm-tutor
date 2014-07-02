@@ -16,3 +16,7 @@ cpr(path.resolve(__dirname, 'bootstrap'), dir, {
       rimraf.sync(path.resolve(dir, 'uninstall/bower'))
     })
 })
+
+
+
+

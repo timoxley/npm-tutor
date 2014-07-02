@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-workflow-init",
   "version": "0.0.0",
-  "description": "making packages - init: make npm make package.jsons",
+  "description": "generating package.json: make npm make package.jsons",
   "main": "index.js",
   "bin": {
     "helpme": "help.js",

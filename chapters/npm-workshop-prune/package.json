@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-prune",
   "version": "0.0.0",
-  "description": "prune: learn how prune work",
+  "description": "grooming node_modules: learn how prune work",
   "main": "index.js",
   "bin": {
     "helpme": "help.js",

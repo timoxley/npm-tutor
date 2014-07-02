@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-dependencies",
   "version": "0.0.0",
-  "description": "inspecting dependencies: learn how dependencies work",
+  "description": "visualising node_modules: learn how dependencies work",
   "main": "index.js",
   "bin": {
     "helpme": "help.js",
