@@ -1,5 +1,7 @@
 "use strict"
 
+if (!process.env['WORKSHOP_NAME']) return process.exit(1)
+
 var path = require('path')
 var mkdirp = require('mkdirp')
 var rimraf = require('rimraf')
