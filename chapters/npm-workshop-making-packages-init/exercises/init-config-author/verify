@@ -65,6 +65,6 @@ function done(err, results) {
 
   console.info('\nGood work!\n')
 
-console.info('\nPlease contineue to enjoy these personalized package.json files courtesy of `npm init`. Thanks `npm init`\n')
+  console.info('\nPlease contineue to enjoy these personalized package.json files courtesy of `npm init`.\nThanks `npm init`\n')
 
 }
