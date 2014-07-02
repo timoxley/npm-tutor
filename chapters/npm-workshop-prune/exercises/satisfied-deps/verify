@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assertf')
+var exec = require('child_process').exec
+var semver = require('semver')
+var rimraf = require('rimraf')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var pruneDir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'prune')
+
+var oldPkgDir = path.resolve(__dirname, '../../bootstrap/prune/')
+
+exec('npm install', {cwd: oldPkgDir}, function(err) {
+  assert.ifError(err)
+  exec('npm ls --parseable mime-types', {cwd: oldPkgDir}, function(err, stdout) {
+    assert.ifError(err)
+    var dirs = stdout.trim().split('\n')
+    var dir = dirs[0]
+    var oldVersion = require(path.resolve(dir, 'package.json')).version
+    rimraf.sync(path.resolve(dir, 'node_modules'))
+    exec('npm ls --parseable mime-types', {cwd: pruneDir}, function(err, stdout, stderr) {
+      assert.ok(!err, '%s%s\n%s\n%s', err && err.message, 'npm ls', stdout, stderr)
+      var dirs = stdout.trim().split('\n')
+      var dir = dirs[0]
+      var newVersion = require(path.resolve(dir, 'package.json')).version
+      assert.ok(semver.lt(newVersion, oldVersion), 'mime-types@%s is not less than the original mime-types@%s!', newVersion, oldVersion)
+      console.info('Fantastic stuff mate.')
+    })
+  })
+})

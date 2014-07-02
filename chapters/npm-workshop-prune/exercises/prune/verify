@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assert')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+exec('npm ls', {cwd: process.env['WORKSHOP_WORKING_DIR']}, function(err) {
+  assert.ok(!err, 'Looks like there are extraneous packages!')
+  console.info('\nGreat! I found no extraneous packages.')
+})

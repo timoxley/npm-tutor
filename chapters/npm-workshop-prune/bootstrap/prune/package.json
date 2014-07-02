@@ -1,0 +1,7 @@
+{
+  "name": "prune-example",
+  "version": "0.0.0",
+  "dependencies": {
+    "accepts": "1.0.6"
+  }
+}

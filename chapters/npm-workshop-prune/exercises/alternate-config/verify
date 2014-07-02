@@ -1,0 +1,41 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assertf')
+var exec = require('child_process').exec
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var pruneDir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'prune')
+
+var oldPkg = require(path.resolve(__dirname, '../../bootstrap/prune/package.json'))
+var newPkg = require(pruneDir, 'package.json')
+
+assert.deepEqual(oldPkg, newPkg, 'Do not modify the package.json!\nThe unaltered package.json is:\n' + JSON.stringify(oldPkg, null, 2))
+
+exec('npm install', {cwd: path.resolve(__dirname, '../../bootstrap/prune')}, function(err) {
+  if (err) throw err
+  exec('npm ls', {cwd: path.resolve(__dirname, '../../bootstrap/prune')}, function(err, stdout) {
+    assert.ifError(err)
+    stdout = stdout.trim()
+    var lines = stdout.split('\n')
+    var oldConfig = lines.slice(1)
+
+    exec('npm ls', {cwd: pruneDir}, function(err, stdout, stderr) {
+      assert.ok(!err, '%s%s\n%s\n%s', err && err.message, 'npm ls', stdout, stderr)
+      stdout = stdout.trim()
+      var lines = stdout.split('\n')
+      var newConfig = lines.slice(1)
+      assert.notDeepEqual(
+        newConfig, oldConfig,
+        "Package hierarchy must be different:\nOld:\n%s\n\nNew:\n%s",
+        oldConfig.join('\n'),
+        newConfig.join('\n')
+      )
+      console.info('\nGreat work! That is a different, yet valid configuration for this package.\n')
+    })
+  })
+})
