@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var path = require('path')
+var assert = require('assertf')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var answer = 2
+
+var submission = process.argv[2]
+
+assert.ok(submission, 'Is that even an answer??')
+submission = parseInt(submission, 10)
+assert.ok(!Number.isNaN(submission), 'Is that even an answer??')
+
+assert.equal(submission, answer, 'Nope.\nYou should only count the new packages in node_modules, and no need to include packages of packages.')

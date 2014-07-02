@@ -1,0 +1,17 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assertf')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var dir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'uninstall')
+var target = path.resolve(dir, 'node_modules/bower')
+var pkg = require(path.resolve(dir, 'package.json'))
+
+assert.ok(!fs.existsSync(target), 'Did you uninstall the package?')
+assert.ok(!pkg.dependencies || !pkg.dependencies['bower'], 'Why is that still specified as a dependency?\nuninstall --save would have also removed it from the package.json')
+console.info('\nAll that is necessary for the triumph of evil is that good men do nothing.\n')

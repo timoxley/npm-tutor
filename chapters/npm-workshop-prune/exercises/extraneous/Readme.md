@@ -1,7 +1,7 @@
 # Extraneous Packages
 
-An extraneous package is any package found in `node_modules` which
-does not satisfy the semver range for a parent package.json
+An extraneous package is any installed package which does not satisfy
+the semver range for any unfulfilled dependency.
 
 ## Task
 

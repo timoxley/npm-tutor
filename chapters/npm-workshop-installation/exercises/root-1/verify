@@ -9,6 +9,8 @@ process.on('uncaughtException', require('workshop-assertion-message'));
 
 var submission = process.argv[2]
 submission = path.resolve(process.cwd(), submission)
+assert(submission, 'Uh, which path will it install into?')
+submission = submission.trim()
 
 var root = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'npmroot')
 var answer = path.resolve(root, 'a/b/node_modules')
@@ -18,6 +20,7 @@ exec('npm root', {
 }, function(err, answer) {
   assert.ifError(err)
   answer = answer.trim()
-  assert.equal(submission, answer, '%s is incorrect!\n')
-  console.info('\nYou are correct, npm would definitely install packages in %s.\n', answer)
+  assert.equal(submission, answer, '%s is incorrect!', submission)
+  console.info('\nYou are correct!\n')
+  console.info('npm love to install packages in %s.\n', answer)
 })

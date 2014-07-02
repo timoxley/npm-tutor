@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var path = require('path')
+var assert = require('assertf')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var answer = 'glob'
+
+var submission = process.argv[2]
+
+assert.ok(submission, 'Which package??')
+
+assert.equal(submission, answer, 'Nope.')

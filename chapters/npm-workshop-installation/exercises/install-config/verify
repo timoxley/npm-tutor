@@ -1,0 +1,15 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var assert = require('assertf')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var answer = "I'm happy."
+
+var submission = process.argv.slice(2).join(' ')
+
+assert.ok(submission, "Tell me you're happy.")
+assert.equal(submission.trim(), answer, "Tell me you're happy.")
+console.info('\nYou are happy.\n')

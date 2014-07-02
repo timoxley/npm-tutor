@@ -12,7 +12,7 @@ process.on('uncaughtException', require('workshop-assertion-message'));
 var pruneDir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'prune')
 
 var oldPkg = require(path.resolve(__dirname, '../../bootstrap/prune/package.json'))
-var newPkg = require(pruneDir, 'package.json')
+var newPkg = require(path.resolve(pruneDir, 'package.json'))
 
 assert.deepEqual(oldPkg, newPkg, 'Do not modify the package.json!\nThe unaltered package.json is:\n' + JSON.stringify(oldPkg, null, 2))
 

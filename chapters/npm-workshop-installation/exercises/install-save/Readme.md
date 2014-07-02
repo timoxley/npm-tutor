@@ -1,6 +1,6 @@
-# Specifying dependencies
+# Specifying Dependencies
 
-The `package.json` can includes a list of dependencies for the current package, e.g.
+The package.json can includes a list of dependencies for the current package, e.g.
 
 ```json
 {
@@ -22,7 +22,8 @@ will download and install them in a `node_modules` directory within the
 
 ---
 
-You should rarely need to manually edit your package.json; npm includes
+
+You rarely need to manually edit your package.json; npm includes
 many commands and flags which will automate much of the tedium of
 maintaining a package.json.
 

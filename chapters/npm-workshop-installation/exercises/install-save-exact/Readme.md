@@ -1,10 +1,20 @@
 # npm install --save-exact
 
 By default, `npm install --save` uses the `^` semver range when
-installing dependencies.
+saving dependencies to the `package.json`.
 
-To force this package to only ever install a specific version of a
-package use the `--save-exact` configuration.
+```json
+{
+  "name": "example-package",
+  "version": "0.0.0",
+  "dependencies": {
+    "once": "^1.3.0"
+  }
+}
+```
+
+To remove the semver prefix and force this package to only ever install
+a specific version of a package, use the `--save-exact` configuration.
 
 ## Task
 

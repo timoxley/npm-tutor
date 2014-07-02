@@ -1,8 +1,7 @@
 # Satifying dependencies
 
-
 Installing a package can impact which version of a package is used by
-your other dependencies.
+other dependencies.
 
 npm does not always install the highest possible version allowed by a
 package's semver. If a dependency is already satisfied by an existing

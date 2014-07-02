@@ -1,19 +1,14 @@
 # npm install --save-prefix
 
-By default, `npm install --save` uses the `^` semver range when
-installing dependencies.
+You can use the "save prefix" configuration to change the
+default semver range `^` on a per-install or global level.
 
-You can use the "save prefix" configuration to alter this setting on a
-per-install, or global level.
+Run install with the `--save-prefix` to install a package with a particular prefix.
+
 
 ## Task
 
-Use `--save-prefix` to alter the semver range in your package.json for
-the request module to be **greater than or equal to** the current latest
-version.
-
-As with any configuration, you can permanently fix this to a particular
-value with `npm config set <key> <value>`.
+Alter the semver range in your package.json for the `once` module to be **greater than or equal to** the current latest version.
 
 Run `verify` to proceed!
 
@@ -24,3 +19,10 @@ Run `verify` to proceed!
 ## Hints
 
 * `npm help install`
+* You might need quotes around your prefix.
+
+## Tips
+
+As with any npm configuration, you can permanently fix the value to a
+particular setting with `npm config set <key> <value>`, see `npm help
+config` for more information.

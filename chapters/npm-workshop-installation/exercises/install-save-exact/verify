@@ -5,9 +5,8 @@
 var fs = require('fs')
 var util = require('util')
 var path = require('path')
-var exec = require('child_process').exec
-
 var assert = require('assertf')
+var semver = require('semver')
 
 process.on('uncaughtException', require('workshop-assertion-message'));
 
@@ -15,31 +14,21 @@ function inspect(obj) {
   return util.inspect(obj, {colors: true, depth: 30})
 }
 
+var target = path.resolve(process.cwd(), 'node_modules/once')
 var targetPackage = path.resolve(process.cwd(), 'package.json')
 
-console.info('Checking your package.json exists...')
 assert.ok(fs.existsSync(targetPackage), 'Where is your package.json?')
 
 var pkg = require(targetPackage)
 
-console.info('Checking your package.json has dependencies...')
-assert.ok(pkg.dependencies, 'package.json needs at least one dependency: \n' + inspect(pkg))
-var deps = Object.keys(pkg.dependencies)
+assert.ok(pkg.dependencies, 'package.json needs dependencies: ' + inspect(pkg))
 
-assert.ok(pkg.dependencies, 'package.json needs at least one dependency: \n' + inspect(pkg))
-var deps = Object.keys(pkg.dependencies)
-assert.ok(deps.length, 'package.json needs at least one dependency: \n' + inspect(pkg))
 
-console.info('Checking your package.json has development dependencies...')
-assert.ok(pkg.devDependencies, 'package.json needs at least one development dependency: \n' + inspect(pkg))
-var devDeps = Object.keys(pkg.devDependencies)
-assert.ok(devDeps.length, 'package.json needs at least one development dependency: \n' + inspect(pkg))
+assert.ok(pkg.dependencies['once'], 'package.json does not have the once dependency:\n' + inspect(pkg))
 
-console.info('Checking only production dependencies are installed...')
+assert.ok(semver.toComparators(pkg.dependencies['once'])[0].length == 1, "%s does not look like an exact dependency.\n\n%s", pkg.dependencies['once'], inspect(pkg))
 
-var packages = path.resolve(process.cwd(), 'node_modules')
-fs.readdir(packages, function(files) {
-  assert.ok(files.length > 0, 'Hm, is anything actually installed in node_modules?')
-  assert.deepEqual(files.sort(), deps, "Gah, it doesn't look like only production dependencies are installed.")
-  console.info('Great! Only production dependencies were installed!')
-})
+var target = path.resolve(process.cwd(), 'node_modules/once')
+assert.ok(fs.existsSync(target), 'The once package must be installed!')
+console.info('\nGreat stuff. You set up \'once\' as a fixed-version dependency.')
+

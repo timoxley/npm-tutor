@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-dependencies",
   "version": "0.0.0",
-  "description": "inspecting dependencies: learn how dependencies work",
+  "description": "installing dependencies: learn how dependencies work",
   "main": "index.js",
   "bin": {
     "helpme": "help.js",
@@ -12,12 +12,14 @@
   },
   "exercises": [
     "exercises/install",
+    "exercises/install-config",
     "exercises/root-1",
-    "exercises/root-2",
+    "exercises/install-save",
     "exercises/install-save-exact",
     "exercises/install-save-prefix",
     "exercises/install-save-dev",
-    "exercises/install-production"
+    "exercises/install-production",
+    "exercises/uninstall"
   ],
   "dependencies": {
     "assertf": "^1.0.0",

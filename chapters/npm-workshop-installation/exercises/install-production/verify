@@ -38,6 +38,8 @@ assert.ok(devDeps.length, 'package.json needs at least one development dependenc
 console.info('Checking only production dependencies are installed...')
 
 var packages = path.resolve(process.cwd(), 'node_modules')
+assert(fs.existsSync(packages), 'No packages found??')
+
 fs.readdir(packages, function(err, files) {
   assert.ifError(err)
   files = files.filter(function(f) { return f[0] !== '.'}) // remove hidden

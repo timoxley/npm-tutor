@@ -11,7 +11,12 @@
     "chapter-test": "commands/test"
   },
   "exercises": [
-    "exercises/satisfied-deps"
+    "exercises/extraneous",
+    "exercises/prune",
+    "exercises/alternate-config",
+    "exercises/satisfied-deps",
+    "exercises/dedupe-1",
+    "exercises/dedupe-2"
   ],
   "dependencies": {
     "assertf": "^1.0.0",

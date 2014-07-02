@@ -18,5 +18,5 @@ exec('npm ls --json', {cwd: dir}, function(err, data) {
   var ls = JSON.parse(data)
   var answer = ls.dependencies.through2.dependencies['readable-stream'].dependencies['string_decoder'].version
   assert.equal(submission, answer, 'Hm. No, %s is not the installed version of string_decoder.', submission)
-  console.info('\n%s is correct!\n')
+  console.info('\n%s is correct!\n', answer)
 })

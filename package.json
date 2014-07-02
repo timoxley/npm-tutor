@@ -15,13 +15,12 @@
   "license": "ISC",
   "exercises": [
     "chapters/npm-workshop-ready-up",
-    "chapters/npm-workshop-installation",
-    "chapters/npm-workshop-inspect",
-    "chapters/npm-workshop-prune",
     "chapters/npm-workshop-discovery",
-    "chapters/npm-workshop-semver",
     "chapters/npm-workshop-making-packages-init",
-    "chapters/npm-workshop-making-packages-dependencies"
+    "chapters/npm-workshop-installation",
+    "chapters/npm-workshop-semver",
+    "chapters/npm-workshop-inspect",
+    "chapters/npm-workshop-prune"
   ],
   "bundledDependencies": [
     "workshop-pkg-exercises",

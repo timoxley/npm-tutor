@@ -1,4 +1,4 @@
-# npm ready
+# Register with npm
 
 Later, we'll be publishing some packages to the npm registry. Let's
 prepare for this now by making sure we're registered npm.

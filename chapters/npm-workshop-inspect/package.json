@@ -26,7 +26,7 @@
     "workshop-exercises": "*"
   },
   "scripts": {
-    "postinstall": "node setup.js && node help.js"
+    "postinstall": "node help.js"
   },
   "author": "Tim Oxley",
   "license": "ISC"

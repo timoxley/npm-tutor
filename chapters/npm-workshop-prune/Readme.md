@@ -1,3 +1,1 @@
 # npm prune #
-
-NPM INSTALL

@@ -16,7 +16,7 @@ submission = submission.trim()
 exec('npm ls --json', {cwd: dir}, function(err, data) {
   assert.ifError(err)
   var ls = JSON.parse(data)
-  var answer = ls.dependencies.through2.dependencies['readable-stream'].from.split('@')[1]
+  var answer = ls.dependencies.through2.dependencies['readable-stream'].dependencies['string_decoder'].from.split('@')[1]
   assert.equal(submission, answer, '%s is not the correct semver range.\nWe are expecting just the range.\ne.g. verify "~2.2.1"', submission)
   console.info('\nGreat JSON parsing skills. %s is correct.\n', submission)
 })

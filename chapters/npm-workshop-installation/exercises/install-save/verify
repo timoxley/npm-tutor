@@ -5,7 +5,7 @@
 var fs = require('fs')
 var util = require('util')
 var path = require('path')
-var assert = require('assert')
+var assert = require('assertf')
 
 process.on('uncaughtException', require('workshop-assertion-message'));
 
@@ -16,18 +16,14 @@ function inspect(obj) {
 var target = path.resolve(process.cwd(), 'node_modules/once')
 var targetPackage = path.resolve(process.cwd(), 'package.json')
 
-console.info('Checking your package.json exists...')
 assert.ok(fs.existsSync(targetPackage), 'Where is your package.json?')
 
 var pkg = require(targetPackage)
 
-console.info('Checking your package.json has dependencies...')
-assert.ok(pkg.dependencies, 'package.json needs dependencies: ' + inspect(pkg))
+assert.ok(pkg.dependencies, 'package.json needs dependencies:\n' + inspect(pkg))
 
-console.info('Checking your package.json has "once" as a dependency...')
-assert.ok(pkg.dependencies['once'], 'package.json does not have the once dependency: ' + inspect(pkg))
+assert.ok(pkg.dependencies['once'], 'package.json does not have the once dependency:\n' + inspect(pkg))
 
-console.info('Checking once is installed...')
 var target = path.resolve(process.cwd(), 'node_modules/once')
 assert.ok(fs.existsSync(target), 'The once package must be installed!')
 console.info('\nGreat stuff. You set up \'once\' as a dependency.')
