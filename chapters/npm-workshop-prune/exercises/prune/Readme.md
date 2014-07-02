@@ -1,4 +1,4 @@
-# npm prune #
+# The Danger of Extraneous Packages
 
 Extraneous packages regularly lead to accidentally publishing broken
 code; it will work on your machine, but when someone else goes to
@@ -17,3 +17,12 @@ Run `verify` to proceed!
 ## Conditions
 
 * Do not edit your package.json or remove any installed packages by hand.
+
+## Hints
+
+* `npm help prune`
+
+## Tips
+
+* You can also use `npm prune --production` to remove development
+dependencies.
