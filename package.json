@@ -11,6 +11,7 @@
     "start": "node bin/npm-workshop.js",
     "prestart": "npm run prepublish",
     "pretest": "npm run prepublish",
+    "preinstall": "npm prune",
     "prepublish": "npm install lib/workshop-*"
   },
   "author": "Tim Oxley <secoif@gmail.com>",
