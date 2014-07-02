@@ -2,7 +2,9 @@
   "name": "npm-workshop",
   "version": "0.0.0",
   "description": "learn you npm",
-  "bin": "bin/npm-workshop.js",
+  "bin": {
+    "npm-workshop": "bin/npm-workshop.js"
+  },
   "main": "index.js",
   "scripts": {
     "test": "tape test/*.js",
@@ -12,7 +14,7 @@
     "prepublish": "npm install lib/workshop-*",
     "preinstall": "npm install lib/workshop-*"
   },
-  "author": "",
+  "author": "Tim Oxley <secoif@gmail.com>",
   "license": "ISC",
   "exercises": [
     "chapters/npm-workshop-ready-up",
@@ -22,15 +24,6 @@
     "chapters/npm-workshop-semver",
     "chapters/npm-workshop-inspect",
     "chapters/npm-workshop-prune"
-  ],
-  "bundledDependencies": [
-    "workshop-pkg-exercises",
-    "workshop-exercises",
-    "workshop-exercise",
-    "workshop-exercise-help",
-    "workshop-data",
-    "workshop-sequence",
-    "workshop-assertion-message"
   ],
   "dependencies": {
     "afterfn": "^2.0.0",
@@ -59,5 +52,25 @@
   "devDependencies": {
     "rimraf": "^2.2.8",
     "tape": "^2.13.3"
-  }
+  },
+  "bundleDependencies": [
+    "workshop-pkg-exercises",
+    "workshop-exercises",
+    "workshop-exercise",
+    "workshop-exercise-help",
+    "workshop-data",
+    "workshop-sequence",
+    "workshop-assertion-message"
+  ],
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/timoxley/npm-workshop.git"
+  },
+  "bugs": {
+    "url": "https://github.com/timoxley/npm-workshop/issues"
+  },
+  "homepage": "https://github.com/timoxley/npm-workshop"
 }
