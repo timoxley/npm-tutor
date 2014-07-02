@@ -15,7 +15,7 @@
     "prepublish": "npm install lib/workshop-*"
   },
   "author": "Tim Oxley <secoif@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "exercises": [
     "chapters/npm-workshop-ready-up",
     "chapters/npm-workshop-discovery",
