@@ -1,6 +1,6 @@
 {
   "name": "npm-workshop",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "learn you npm",
   "bin": {
     "npm-workshop": "bin/npm-workshop.js"
@@ -11,8 +11,7 @@
     "start": "node bin/npm-workshop.js",
     "prestart": "npm run prepublish",
     "pretest": "npm run prepublish",
-    "prepublish": "npm install lib/workshop-*",
-    "preinstall": "npm install lib/workshop-*"
+    "prepublish": "npm install lib/workshop-*"
   },
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "ISC",
