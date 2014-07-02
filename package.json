@@ -9,7 +9,8 @@
     "start": "node bin/npm-workshop.js",
     "prestart": "npm run prepublish",
     "pretest": "npm run prepublish",
-    "prepublish": "npm install lib/workshop-*"
+    "prepublish": "npm install lib/workshop-*",
+    "preinstall": "npm install lib/workshop-*"
   },
   "author": "",
   "license": "ISC",
