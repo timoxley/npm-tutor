@@ -1,0 +1,23 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var path = require('path')
+var exec = require('child_process').exec
+var assert = require('assertf')
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var submission = process.argv[2]
+submission = path.resolve(process.cwd(), submission)
+
+var root = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'npmroot')
+var answer = path.resolve(root, 'a/b/node_modules')
+
+exec('npm root', {
+  cwd: path.resolve(root, 'a/b/c')
+}, function(err, answer) {
+  assert.ifError(err)
+  answer = answer.trim()
+  assert.equal(submission, answer, '%s is incorrect!\n')
+  console.info('\nYou are correct, npm would definitely install packages in %s.\n', answer)
+})

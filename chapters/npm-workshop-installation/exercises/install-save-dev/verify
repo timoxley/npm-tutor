@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var util = require('util')
+var path = require('path')
+var assert = require('assert')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+function inspect(obj) {
+  return util.inspect(obj, {colors: true, depth: 30})
+}
+
+var targetPackage = path.resolve(process.cwd(), 'package.json')
+
+console.info('Checking your package.json exists...')
+assert.ok(fs.existsSync(targetPackage), 'Where is your package.json?')
+
+var pkg = require(targetPackage)
+
+console.info('Checking for development dependencies...')
+assert.ok(pkg.devDependencies, 'Your package.json needs devDependencies: ' + inspect(pkg))
+
+console.info('Checking tape is not a regular dependency...')
+assert.ok(!pkg.dependencies['tape'], 'Your package.json must not have tape as a regular dependency: \n' + inspect(pkg))
+
+console.info('Checking tape is a development dependency...')
+assert.ok(pkg.devDependencies['tape'], 'Your package.json does not have tape as a development dependency: \n' + inspect(pkg))
+
+console.info('Checking tape is installed...')
+var target = path.resolve(process.cwd(), 'node_modules/tape')
+assert.ok(fs.existsSync(target), 'tape must be installed!')
+console.info('\nAlright. Nice. This package.json tells me that tape is a development dependency.')

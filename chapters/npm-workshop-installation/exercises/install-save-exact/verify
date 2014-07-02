@@ -1,0 +1,45 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var util = require('util')
+var path = require('path')
+var exec = require('child_process').exec
+
+var assert = require('assertf')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+function inspect(obj) {
+  return util.inspect(obj, {colors: true, depth: 30})
+}
+
+var targetPackage = path.resolve(process.cwd(), 'package.json')
+
+console.info('Checking your package.json exists...')
+assert.ok(fs.existsSync(targetPackage), 'Where is your package.json?')
+
+var pkg = require(targetPackage)
+
+console.info('Checking your package.json has dependencies...')
+assert.ok(pkg.dependencies, 'package.json needs at least one dependency: \n' + inspect(pkg))
+var deps = Object.keys(pkg.dependencies)
+
+assert.ok(pkg.dependencies, 'package.json needs at least one dependency: \n' + inspect(pkg))
+var deps = Object.keys(pkg.dependencies)
+assert.ok(deps.length, 'package.json needs at least one dependency: \n' + inspect(pkg))
+
+console.info('Checking your package.json has development dependencies...')
+assert.ok(pkg.devDependencies, 'package.json needs at least one development dependency: \n' + inspect(pkg))
+var devDeps = Object.keys(pkg.devDependencies)
+assert.ok(devDeps.length, 'package.json needs at least one development dependency: \n' + inspect(pkg))
+
+console.info('Checking only production dependencies are installed...')
+
+var packages = path.resolve(process.cwd(), 'node_modules')
+fs.readdir(packages, function(files) {
+  assert.ok(files.length > 0, 'Hm, is anything actually installed in node_modules?')
+  assert.deepEqual(files.sort(), deps, "Gah, it doesn't look like only production dependencies are installed.")
+  console.info('Great! Only production dependencies were installed!')
+})

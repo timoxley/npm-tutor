@@ -1,0 +1,44 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var util = require('util')
+var path = require('path')
+var exec = require('child_process').exec
+
+var assert = require('assertf')
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+function inspect(obj) {
+  return util.inspect(obj, {colors: true, depth: 30})
+}
+
+var target = path.resolve(process.cwd(), 'node_modules/request')
+var targetPackage = path.resolve(process.cwd(), 'package.json')
+
+console.info('Checking your package.json exists...')
+assert.ok(fs.existsSync(targetPackage), 'Where is your package.json?')
+
+var pkg = require(targetPackage)
+
+console.info('Checking your package.json has dependencies...')
+assert.ok(pkg.dependencies, 'package.json needs dependencies: ' + inspect(pkg))
+
+console.info('Checking your package.json has "request" as a dependency...')
+assert.ok(pkg.dependencies['request'], 'package.json does not have the request dependency: \n' + inspect(pkg))
+
+
+console.info('Checking the latest version of request is installed...')
+exec('npm info request version', function(err, stdout) {
+  assert.ifError(err)
+  var version = stdout.trim()
+  assert.equal(pkg.dependencies['request'], ">=" + version, 'Incorrect. We want our package to install any version greater than or equal to %s.' version)
+
+  var target = path.resolve(process.cwd(), 'node_modules/request')
+  assert.ok(fs.existsSync(target), 'The request package must be installed!')
+
+  console.info('\nGreat stuff, \'request\' will install any version greater than or equal to %s.', version)
+})
+
