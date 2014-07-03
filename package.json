@@ -1,6 +1,6 @@
 {
   "name": "npm-tutor",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "npm-tutor",
   "bin": {
     "npm-tutor": "bin/npm-workshop.js"
