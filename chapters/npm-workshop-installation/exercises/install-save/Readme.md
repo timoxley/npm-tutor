@@ -1,6 +1,6 @@
 # Specifying Dependencies
 
-The package.json can includes a list of dependencies for the current package, e.g.
+The package.json can include a list of dependencies for the current package, e.g.
 
 ```json
 {
@@ -28,8 +28,8 @@ many commands and flags which will automate much of the tedium of
 maintaining a package.json.
 
 For example, given the right flags, npm can update your package.json for
-you when installing dependencies, so there's no need to check which
-version installed and update your package.json accordingly.
+you when installing dependencies. That way there's no need to check which
+version installed and your package.json will be updated accordingly.
 
 ## Task
 
