@@ -1,9 +1,9 @@
 {
-  "name": "npm-workshop",
-  "version": "0.0.7",
-  "description": "npm-workshop",
+  "name": "npm-tutor",
+  "version": "0.0.8",
+  "description": "npm-tutor",
   "bin": {
-    "npm-workshop": "bin/npm-workshop.js"
+    "npm-tutor": "bin/npm-workshop.js"
   },
   "main": "index.js",
   "scripts": {
