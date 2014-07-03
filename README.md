@@ -8,6 +8,7 @@ npm  workshop for nodeconf 2014
 ```
 git clone git@github.com:timoxley/npm-workshop.git
 cd npm-workshop
+npm run prepublish
 npm link
 cd ..
 mkdir workshpace
