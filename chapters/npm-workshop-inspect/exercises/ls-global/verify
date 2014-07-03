@@ -22,13 +22,13 @@ spawn('npm', 'ls --json --depth=1 --global'.split(' '))
   var names = Object.keys(ls.dependencies)
 
   var min = names.reduce(function(min, key) {
-    var numDeps = Object.keys(ls.dependencies[key]).length
+    var numDeps = ls.dependencies[key].dependencies ? Object.keys(ls.dependencies[key].dependencies).length : 0;
     if (numDeps < min) return numDeps
     return min
   }, Infinity)
 
   var minDepsNames = names.filter(function(key) {
-    var numDeps = Object.keys(ls.dependencies[key]).length
+    var numDeps = ls.dependencies[key].dependencies ? Object.keys(ls.dependencies[key].dependencies).length : 0;
     return (numDeps == min)
   })
 
