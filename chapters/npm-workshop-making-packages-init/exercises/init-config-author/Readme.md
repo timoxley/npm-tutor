@@ -1,7 +1,7 @@
 # npm init - configuration
 
 You may have noticed `npm init` doesn't even know your name. Let's get
-aquainted so `npm init` can fill-in name and email address
+acquainted so `npm init` can fill-in name and email address
 automatically.
 
 The following commands will configure npm to permanently remember your
@@ -18,6 +18,8 @@ Configure npm with your name and email settings then re-run `npm init`.
 
 You will need to remove the package.json we just created (or just the
 "author" field) in order to have `npm init` fill this automatically.
+
+`verify` to verify
 
 ## More Info
 
