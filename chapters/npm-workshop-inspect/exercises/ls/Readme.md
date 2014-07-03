@@ -1,10 +1,10 @@
 # npm ls
 
-A copy of through2 is installed in the `npmls` directory.
+From the `./npmls` directory:
 
-## Task
+* Run `npm install --silent`
 
-Which version of `string_decoder` is installed within through2?
+Which version of `string_decoder` is installed within `through2`?
 
 ```
 verify <x.y.z>
