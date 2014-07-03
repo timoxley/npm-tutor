@@ -14,7 +14,7 @@ Run `verify` to proceed.
 
 ## More Information
 
-The `prune` directory contains the following package.json:
+The `./prune` directory contains the following package.json:
 
 ```json
 {

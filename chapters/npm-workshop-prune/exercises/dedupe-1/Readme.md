@@ -54,10 +54,14 @@ latest possible version that will satisfy each package's dependencies.
 
 ## Task
 
-Run `npm install` in the `dedupe` directory.
-Use `npm dedupe` to remove duplicate packages.
+From the `./dedupe` directory:
 
-How many packages are **moved** to the top-level `node_modules` directory?
+* Run `npm install`.
+* Note the installed package hierarchy with `npm ls`.
+* Use `npm dedupe` to remove duplicate packages.
+
+How many packages were **moved** to the `node_modules` directory in
+`./dedupe`?
 
 ```
 verify <Number>

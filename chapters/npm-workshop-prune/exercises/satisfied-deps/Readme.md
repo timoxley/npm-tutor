@@ -1,25 +1,14 @@
 # Satifying dependencies
 
-Installing a package can impact which version of a package is used by
-other dependencies.
+Installing a package can impact which version gets used by seemingly
+unrelated dependencies deeper in the `node_modules` hierarchy.
 
-npm does not always install the highest possible version allowed by a
-package's semver. If a dependency is already satisfied by an existing
-installed package, it will not be installed, even if a higher version is
-available.
+npm will not always install the highest possible version allowed by a
+package's semver. **If a dependency is already satisfied by an existing
+installed package, it will not be installed**, even if a higher version is
+available and valid.
 
-## Task
-
-Change the "dependencies" of the package.json located in the
-`prune` directory, such that running `npm install` in that directory
-will provide a version of `mime-types` to `accepts` which is **LOWER**
-than what is be installed without changing the package.json.
-
-Run `verify` to proceed.
-
-## More Information
-
-The `prune` directory contains the following package.json:
+The `./prune` directory contains the following package.json:
 
 ```json
 {
@@ -31,8 +20,7 @@ The `prune` directory contains the following package.json:
 }
 ```
 
-After running `npm install` with an empty `node_modules`, the hierarchy
-produced with `npm ls` looks like this:
+After running `npm install` the dependency hierarchy looks like so:
 
 ```
 prune-example@0.0.0
@@ -41,11 +29,25 @@ prune-example@0.0.0
   └── negotiator@0.4.7
 ```
 
+## Task
+
+From the `./prune` directory:
+
+Change the "dependencies" of `./prune/package.json` such that with a
+fresh `npm install`, the version of `mime-types` used by `accepts` is
+**LOWER** than what was be installed prior to changing the package.json.
+
+i.e. Alter the parent package so the child package receives a different
+module configuration.
+
+Remove `node_modules` and run `npm install` to test your theory.
+
+Run `verify` to proceed (node_modules will be wiped).
+
 ## Conditions
 
-* Only edit the package.json in the `prune` directory.
+* Only edit the package.json in the `./prune` directory.
 
 ## Hints
 
 * This is a one-line change.
-* You may need to look at accept's dependency's semver.
