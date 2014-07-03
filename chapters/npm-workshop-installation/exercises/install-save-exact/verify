@@ -24,11 +24,11 @@ var pkg = require(targetPackage)
 assert.ok(pkg.dependencies, 'package.json needs dependencies: ' + inspect(pkg))
 
 
-assert.ok(pkg.dependencies['once'], 'package.json does not have the once dependency:\n' + inspect(pkg))
+assert.ok(pkg.dependencies['request'], 'package.json does not have the request dependency:\n' + inspect(pkg))
 
-assert.ok(semver.toComparators(pkg.dependencies['once'])[0].length == 1, "%s does not look like an exact dependency.\n\n%s", pkg.dependencies['once'], inspect(pkg))
+assert.ok(semver.toComparators(pkg.dependencies['request'])[0].length == 1, "%s does not look like an exact dependency.\n\n%s", pkg.dependencies['request'], inspect(pkg))
 
-var target = path.resolve(process.cwd(), 'node_modules/once')
-assert.ok(fs.existsSync(target), 'The once package must be installed!')
-console.info('\nGreat stuff. You set up \'once\' as a fixed-version dependency.')
+var target = path.resolve(process.cwd(), 'node_modules/request')
+assert.ok(fs.existsSync(target), 'The request package must be installed!')
+console.info('\nGreat stuff. You set up \'request\' as a fixed-version dependency.')
 
