@@ -13,7 +13,6 @@
   "exercises": [
     "exercises/install",
     "exercises/install-config",
-    "exercises/root-1",
     "exercises/install-save",
     "exercises/install-save-exact",
     "exercises/install-save-prefix",
