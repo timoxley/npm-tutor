@@ -13,3 +13,4 @@ verify <x.y.z>
 ## Hint
 
 * npm help ls
+* If you can't find the `npmls` directory, go back to the directory in which you installed the workshopper (use `pwd` to find out where you are now)
