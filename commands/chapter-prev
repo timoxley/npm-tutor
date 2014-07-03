@@ -1,0 +1,6 @@
+#!/bin/bash
+
+set -e
+workshop-exercises setPrev --silent
+npm-run helpme
+exit 1
