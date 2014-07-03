@@ -22,6 +22,7 @@ exec('npm install', {cwd: oldPkgDir}, function(err) {
     var dirs = stdout.trim().split('\n')
     var dir = dirs[0]
     var oldVersion = require(path.resolve(dir, 'package.json')).version
+
     rimraf.sync(path.resolve(dir, 'node_modules'))
     exec('npm ls --parseable mime-types', {cwd: pruneDir}, function(err, stdout, stderr) {
       assert.ok(!err, '%s%s\n%s\n%s', err && err.message, 'npm ls', stdout, stderr)

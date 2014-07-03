@@ -40,7 +40,8 @@ fresh `npm install`, the version of `mime-types` used by `accepts` is
 i.e. Alter the parent package so the child package receives a different
 module configuration.
 
-Remove `node_modules` and run `npm install` to test your theory.
+Remove any node_modules in the `./prune` directory and run
+`npm install` to test your theory.
 
 Run `verify` to proceed (node_modules will be wiped).
 

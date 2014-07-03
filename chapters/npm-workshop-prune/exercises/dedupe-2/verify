@@ -10,7 +10,8 @@ process.on('uncaughtException', require('workshop-assertion-message'));
 var answer = 'glob'
 
 var submission = process.argv[2]
-
-assert.ok(submission, 'Which package??')
+assert(submission, 'Which package??')
+submission = submission.trim()
 
 assert.equal(submission, answer, 'Nope.')
+console.info('Correct!')
