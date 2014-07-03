@@ -1,0 +1,43 @@
+#!/usr/bin/env node
+
+"use strict"
+
+var fs = require('fs')
+var path = require('path')
+var assert = require('assertf')
+var exec = require('child_process').exec
+
+process.on('uncaughtException', require('workshop-assertion-message'));
+
+var updateDir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'update')
+
+var oldPkgDir = path.resolve(__dirname, '../../bootstrap/update/')
+
+var submission = process.argv[2]
+assert(submission, 'Um, which version of mime-types is now used by accepts?')
+submission = submission.trim()
+
+exec('npm ls --json', {cwd: updateDir}, function(err, stdout, stderr) {
+  assert.ok(!err, '%s%s\n%s\n%s', err && err.message, 'npm ls', stdout, stderr)
+  var ls = JSON.parse(stdout.trim())
+
+  var answer = 'bhjhbj'
+  var outer = 'asdasd'
+
+  try {
+    outer = ls.dependencies['mime-types'].version
+  } catch(e) {
+    assert(false, 'Do not change the package.json!')
+  }
+  assert.equal(outer, '1.0.0', 'Do not change the package.json!')
+
+  try {
+    answer = ls.dependencies['accepts'].dependencies['mime-types'].version
+  } catch(e) {
+    assert(false, 'accepts does not seem to have a mime-types dependency??')
+  }
+
+  assert.equal(submission, answer, "Are you sure that's the version of mime-types used by accepts?")
+  console.info("\nGood!\n\nnpm update is a great way to ensure you're always using the\n
+    latest version allowed by semver.\n")
+})
