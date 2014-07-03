@@ -6,7 +6,7 @@
 ## Task
 
 Purge any unecessary packages from the package.json found in the
-`uninstall` directory.
+`./uninstall` directory.
 
 Run `verify` to proceed.
 
