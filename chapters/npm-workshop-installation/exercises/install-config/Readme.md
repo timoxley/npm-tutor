@@ -48,6 +48,6 @@ verify "I'm happy."
 ## Tips
 
 When you're installing something serious, be careful to not prematurely
-abort `npm install` commands, this can leave your `node_modules` in an
+abort `npm install` commands, as this can leave your `node_modules` in an
 unknown state only recoverable by removing `node_modules` and starting
 the install again.

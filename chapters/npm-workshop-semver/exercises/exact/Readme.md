@@ -1,8 +1,8 @@
 # semver quiz!
 
 Let's clear up any confusion about what is and isn't valid in various
-semver ranges, and we're going to look at how some real-world
-packages are using semver along the way.
+semver ranges, while we look at how some real-world packages are using
+semver along the way.
 
 ## Task
 

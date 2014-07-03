@@ -20,7 +20,8 @@ exec('npm root', {
 }, function(err, answer) {
   assert.ifError(err)
   answer = answer.trim()
+  console.info(answer)
   assert.equal(submission, answer, '%s is incorrect!', submission)
   console.info('\nYou are correct!\n')
-  console.info('npm love to install packages in %s.\n', answer)
+  console.info('npm loves to install packages in %s.\n', answer)
 })
