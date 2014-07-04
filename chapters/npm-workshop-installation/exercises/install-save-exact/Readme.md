@@ -14,7 +14,8 @@ saving dependencies to the `package.json`.
 ```
 
 To remove the semver prefix and force a package to only ever install
-a specific version of a package, use the `--save-exact` configuration.
+a specific version of a package, use the `--save-exact` configuration
+along with `--save`.
 
 ## Task
 
