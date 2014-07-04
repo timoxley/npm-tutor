@@ -38,6 +38,6 @@ exec('npm ls --json', {cwd: updateDir}, function(err, stdout, stderr) {
   }
 
   assert.equal(submission, answer, "Are you sure that's the version of mime-types used by accepts?")
-  console.info("\nGood!\n\nnpm update is a great way to ensure you're always using the\n
-    latest version allowed by semver.\n")
+  console.info("\nGood!\n\nnpm update is a great way to ensure you're always using the\n" +
+    "latest version allowed by semver.\n")
 })
