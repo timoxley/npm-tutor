@@ -18,7 +18,6 @@
   "license": "MIT",
   "exercises": [
     "chapters/npm-workshop-ready-up",
-    "chapters/npm-workshop-discovery",
     "chapters/npm-workshop-making-packages-init",
     "chapters/npm-workshop-installation",
     "chapters/npm-workshop-semver",
@@ -30,6 +29,7 @@
     "ansi": "^0.3.0",
     "assertf": "^1.0.0",
     "beforefn": "^2.2.0",
+    "bl": "^0.8.2",
     "chalk": "^0.4.0",
     "cpr": "^0.3.0",
     "mkdirp": "^0.5.0",
