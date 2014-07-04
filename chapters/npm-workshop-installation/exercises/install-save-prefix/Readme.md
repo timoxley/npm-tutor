@@ -1,4 +1,4 @@
-# npm install --save-prefix
+# npm install --save --save-prefix
 
 You can use the "save prefix" configuration to change the
 default semver range `^` on a per-install or global level.
@@ -20,6 +20,7 @@ Run `verify` to proceed!
 
 * `npm help install`
 * You might need quotes around your prefix.
+  e.g. `npm install --save --save-prefix=">="`
 
 ## Tips
 

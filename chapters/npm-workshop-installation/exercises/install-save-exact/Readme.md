@@ -1,4 +1,4 @@
-# npm install --save-exact
+# npm install --save --save-exact
 
 By default, `npm install --save` uses the `^` semver range when
 saving dependencies to the `package.json`.
