@@ -1,6 +1,6 @@
 # npm ls
 
-A copy of through2 is installed in the `npmls` directory.
+A copy of through2 is installed in the `./npmls` directory.
 
 ## Task
 
@@ -14,4 +14,4 @@ e.g. "verify ~2.2.1"
 
 ## Hint
 
-* npm ls --json
+* `npm ls --json`

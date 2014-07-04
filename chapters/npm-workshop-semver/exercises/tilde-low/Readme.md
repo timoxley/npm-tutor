@@ -3,3 +3,8 @@
 What is the lowest valid version of `mime` in `request@2.20.0`?
 
 `verify <x.y.z>` to proceed.
+
+## Hints
+
+* `npm info request@2.20.0 dependencies`
+* `npm help semver`

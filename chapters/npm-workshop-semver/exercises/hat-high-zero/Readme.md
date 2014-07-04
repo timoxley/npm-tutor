@@ -5,6 +5,7 @@ which is **greater than `minimatch@0.3.0`**?
 
 `verify <x.y.z>` to proceed.
 
-## Hint
+## Hints
 
 * `npm info glob@4.0.3`
+* `npm help semver`
