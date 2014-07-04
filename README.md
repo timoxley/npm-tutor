@@ -10,6 +10,11 @@ npm tutor for nodeconf 2014
 npm install npm-tutor -g
 ```
 
+## Contributors
+
+* [Raquel Vélez](https://github.com/rockbot)
+* [Tim Oxley](https://github.com/timoxley)
+
 ## License
 
 MIT
