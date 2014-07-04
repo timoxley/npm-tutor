@@ -5,6 +5,7 @@ What is the first invalid version of `growl` in `mocha@1.20.1` which is
 
 `verify <x.y.z>` to proceed.
 
-## Hint
+## Hints
 
 * `npm info mocha@1.20.1`
+* `npm help semver`

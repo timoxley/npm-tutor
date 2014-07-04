@@ -8,3 +8,4 @@ What is the lowest invalid version of `forever-agent` in
 ## Hint
 
 * `npm info request@2.20.0 dependencies`
+* `npm help semver`

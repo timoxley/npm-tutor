@@ -5,6 +5,7 @@ What is the lowest **invalid** version of `lru-cache` in
 
 `verify <x.y.z>` to proceed.
 
-## Hint
+## Hints
 
 * `npm info minimatch@0.3.0`
+* `npm help semver`

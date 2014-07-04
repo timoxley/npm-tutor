@@ -5,8 +5,9 @@
 
 ## Task
 
-Purge any unecessary packages from the package.json found in the
-`./uninstall` directory.
+Purge the package from both the package.json and the `node_modules`
+directory found in the `./uninstall` directory with a single npm
+command.
 
 Run `verify` to proceed.
 

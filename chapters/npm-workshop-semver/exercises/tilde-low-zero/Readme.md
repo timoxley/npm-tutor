@@ -4,6 +4,7 @@ What is the lowest valid version of `forever-agent` in `request@2.20.0`?
 
 `verify <x.y.z>` to proceed.
 
-## Hint
+## Hints
 
 * `npm info request@2.20.0 dependencies`
+* `npm help semver`

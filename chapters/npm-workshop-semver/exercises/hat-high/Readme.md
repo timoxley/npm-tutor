@@ -5,6 +5,7 @@ which is **greater than `graceful-fs@3.0.2`**?
 
 `verify <x.y.z>` to proceed.
 
-## Hint
+## Hints
 
 * `npm info glob@4.0.3`
+* `npm help semver`
