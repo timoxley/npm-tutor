@@ -12,4 +12,5 @@ Is `github-url-from-git@1.1.2` a valid dependency for `npm@1.4.17`?
 
 ## Hint
 
+* `npm help semver`
 * `npm info npm@1.4.17 dependencies`

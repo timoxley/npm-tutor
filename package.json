@@ -1,6 +1,6 @@
 {
   "name": "npm-tutor",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "npm-tutor",
   "bin": {
     "npm-tutor": "bin/npm-workshop.js"
@@ -39,7 +39,9 @@
     "quick-tmp": "0.0.0",
     "rimraf": "^2.2.8",
     "semver": "^2.3.1",
+    "split2": "^0.1.2",
     "terminal-menu": "^0.3.2",
+    "through2": "^0.5.1",
     "workshop-assertion-message": "*",
     "workshop-data": "*",
     "workshop-exercise": "*",
