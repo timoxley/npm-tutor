@@ -5,9 +5,8 @@
 
 ## Task
 
-Purge the package from both the package.json and the `node_modules`
-directory found in the `./uninstall` directory with a single npm
-command.
+Use a single npm command to remove the dependency located in the
+`./uninstall` directory.
 
 Run `verify` to proceed.
 

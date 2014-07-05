@@ -13,7 +13,7 @@ From the `./shrinkwrap` directory, ensure that calling `npm install`
 will always install greatest possible version of each package (as of 
 today).
 
-Remove any node_modules in the `./prune` directory and run
+Remove any node_modules in the `./shrinkwrap` directory and run
 `npm install` to test your theory.
 
 ## Hints

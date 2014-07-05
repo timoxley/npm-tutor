@@ -27,6 +27,8 @@ prune-example@0.0.0
 
 ## Task
 
+Create a different, yet valid configuration of `node_modules`.
+
 From the `./prune` directory:
 
 * Run `npm install`

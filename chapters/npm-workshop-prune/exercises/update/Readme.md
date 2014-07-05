@@ -17,7 +17,7 @@ From the `./update` directory:
 * Note the new package hierarchy.
 
 With *exactly* the same package.json, but after running both `install` and
-`upgrade`, which version of `mime-types` is now used by `accepts`?
+`update`, which version of `mime-types` is now used by `accepts`?
 
 ## Conditions
 
