@@ -3,7 +3,7 @@
   "version": "0.0.13",
   "description": "npm-tutor",
   "bin": {
-    "npm-tutor": "bin/npm-workshop.js"
+    "npm-tutor": "bin/npm-tutor.js"
   },
   "main": "index.js",
   "scripts": {
