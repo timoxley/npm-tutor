@@ -3,13 +3,6 @@
   "version": "0.0.0",
   "description": "installing dependencies: learn how dependencies work",
   "main": "index.js",
-  "bin": {
-    "helpme": "help.js",
-    "self": "commands/self",
-    "verify": "commands/verify",
-    "chapter-reset": "commands/restart",
-    "chapter-test": "commands/test"
-  },
   "exercises": [
     "exercises/install",
     "exercises/install-config",
@@ -23,12 +16,7 @@
   "dependencies": {
     "assertf": "^1.0.0",
     "bl": "^0.8.2",
-    "cpr": "^0.3.0",
-    "mkdirp": "^0.5.0",
-    "workshop-assertion-message": "*",
-    "workshop-exercise": "*",
-    "workshop-exercise-help": "*",
-    "workshop-exercises": "*"
+    "workshop-assertion-message": "*"
   },
   "scripts": {
     "postinstall": "node setup.js && node help.js"

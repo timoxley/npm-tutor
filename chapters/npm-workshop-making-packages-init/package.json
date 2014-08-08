@@ -1,15 +1,8 @@
 {
   "name": "npm-workshop-workflow-init",
   "version": "0.0.0",
-  "description": "generating package.json: make npm make package.jsons",
+  "description": "package.json init configuration",
   "main": "index.js",
-  "bin": {
-    "helpme": "help.js",
-    "self": "commands/self",
-    "verify": "commands/verify",
-    "chapter-reset": "commands/restart",
-    "chapter-test": "commands/test"
-  },
   "exercises": [
     "exercises/adduser",
     "exercises/init",
@@ -21,13 +14,7 @@
     "quick-tmp": "0.0.0",
     "rimraf": "^2.2.8",
     "split2": "^0.1.2",
-    "workshop-assertion-message": "*",
-    "workshop-exercise": "*",
-    "workshop-exercise-help": "*",
-    "workshop-exercises": "*"
-  },
-  "scripts": {
-    "postinstall": "node ./help.js"
+    "workshop-assertion-message": "*"
   },
   "author": "Tim Oxley",
   "license": "ISC"

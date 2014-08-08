@@ -1,15 +1,8 @@
 {
   "name": "npm-workshop-prune",
   "version": "0.0.0",
-  "description": "grooming node_modules: learn how prune work",
+  "description": "install algorithm",
   "main": "index.js",
-  "bin": {
-    "helpme": "help.js",
-    "self": "commands/self",
-    "verify": "commands/verify",
-    "chapter-reset": "commands/restart",
-    "chapter-test": "commands/test"
-  },
   "exercises": [
     "exercises/extraneous",
     "exercises/prune",
@@ -22,18 +15,10 @@
   ],
   "dependencies": {
     "assertf": "^1.0.0",
-    "bl": "^0.8.2",
-    "cpr": "^0.3.0",
     "mkdirp": "^0.5.0",
-    "ncp": "^0.5.1",
     "semver": "^2.3.1",
-    "workshop-assertion-message": "*",
-    "workshop-exercise": "*",
-    "workshop-exercise-help": "*",
-    "workshop-exercises": "*"
-  },
-  "scripts": {
-    "postinstall": "node setup.js && node help.js"
+    "rimraf": "^2.2.8",
+    "workshop-assertion-message": "*"
   },
   "author": "Tim Oxley",
   "license": "ISC"
