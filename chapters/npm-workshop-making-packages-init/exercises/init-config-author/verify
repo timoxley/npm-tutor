@@ -31,21 +31,23 @@ console.info('\nChecking instructions were followed correctly...\n')
 var pending = 2
 var results = {}
 
-exec('npm config get npm config get init.author.name', function(err, name) {
+exec('npm config get init.author.name', function(err, name) {
   assert.ifError(err)
-  results.name = name
+  results.name = name.trim()
   if (!--pending) done(null, results)
 })
 
-exec('npm config get npm config get init.author.email', function(err, email) {
+exec('npm config get init.author.email', function(err, email) {
   assert.ifError(err)
-  results.email = email
+  results.email = email.trim()
   if (!--pending) done(null, results)
 })
 
 function done(err, results) {
-  assert.ok(results.name, 'You need to configure your name: %s.')
-  assert.ok(results.email, 'You need to configure an email address: %s.')
+  assert.ok(results.name, 'You need to configure npm with your name: %s.')
+  assert.ok(results.email, 'You need to configure npm with your email address: %s.')
+  console.info('Author configuration is set correctly.')
+
   var typicalInit = {
     "name": dirname,
     "version": "0.0.0",
@@ -59,12 +61,11 @@ function done(err, results) {
   }
 
   assert.equal(submitted.name, typicalInit.name, 'Did you accept the npm init defaults?\n"name" should be %s.',  typicalInit.name)
-  assert.equal(submitted.version, typicalInit.version, 'Did you accept the npm init defaults?\n"version" should be %s.', typicalInit.version)
-  assert.equal(submitted.main, typicalInit.main, 'Did you accept the npm init defaults?\n"main" should be %s.', typicalInit.main)
-  assert.deepEqual(submitted.scripts, typicalInit.scripts, 'Did you accept the npm init defaults?\n"scripts" should be %j.', typicalInit.scripts)
 
-  console.info('\nGood work!\n')
+  assert.equal(submitted.author, typicalInit.author, 'Author does not look right!\n"author" should be %s. Did you re-run npm init after updating your npm config?',  typicalInit.author)
 
-  console.info('\nPlease contineue to enjoy these personalized package.json files courtesy of `npm init`.\nThanks `npm init`\n')
+  console.info('\nGood work! You set your author information to:\n%s', typicalInit.author)
+
+  console.info('\nPlease continue to enjoy these personalized package.json files courtesy of `npm init`. Thanks `npm init`\n')
 
 }

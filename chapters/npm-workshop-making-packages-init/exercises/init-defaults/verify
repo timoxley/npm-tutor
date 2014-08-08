@@ -59,11 +59,8 @@ function done(err, results) {
   }
 
   assert.equal(submitted.name, typicalInit.name, 'Did you accept the npm init defaults?\n"name" should be %s.',  typicalInit.name)
-  assert.equal(submitted.version, typicalInit.version, 'Did you accept the npm init defaults?\n"version" should be %s.', typicalInit.version)
-  assert.equal(submitted.main, typicalInit.main, 'Did you accept the npm init defaults?\n"main" should be %s.', typicalInit.main)
-  assert.deepEqual(submitted.scripts, typicalInit.scripts, 'Did you accept the npm init defaults?\n"scripts" should be %j.', typicalInit.scripts)
 
-  console.info('\nGood work!\n')
+console.info('\nGood work! You set your author information to %s\n', results.name +" <" + results.email +">.")
 
 console.info('\nPlease contineue to enjoy these personalized package.json files courtesy of `npm init`. Thanks `npm init`\n')
 
