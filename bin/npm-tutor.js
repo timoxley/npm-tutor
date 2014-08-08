@@ -116,13 +116,13 @@ function setup(shop, name) {
     return fs.existsSync(path.resolve(process.cwd(), file))
   })
   if (alreadyBootStrapped) return
-  console.log()
+  console.info('\n%s\n', process.cwd())
   inquirer.prompt([{
     'type': 'confirm',
     'name': 'ok',
     'default': true,
     'message': wordwrap(4, 80)(
-      "We're about to populate *this directory* with some files/dirs "+
+      "We're about to populate the above directory with some files/dirs "+
       "needed for these exercises. If they've already been created " +
       "then don't worry, they won't be replaced.\n\nContinue?"
     ).replace(/^\s+/, '')
