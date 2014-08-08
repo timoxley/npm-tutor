@@ -15,8 +15,8 @@ getLatest(function(err, latest) {
   exec('npm -v', function(err, stdout) {
     assert.ifError(err)
     var current = stdout.trim()
-    assert.equal(current, latest, "Oh dear, " + current + " is not the latest released version of npm.\nThe latest version is "+latest+".")
-    console.info('\nThat is good. You are using the latest version of npm.')
+    assert.equal(current, latest, "Oh dear, " + current + " is not the latest stable version of npm.\nThe latest version is "+latest+".\n\nGo to https://www.npmjs.org/doc/misc/npm-faq.html#how-do-i-update-npm- for instructions on how to update to the latest stable version of npm.")
+    console.info('\nThat is good. You are using the latest stable version of npm: %s', latest)
   })
 })
 

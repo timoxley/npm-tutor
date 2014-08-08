@@ -12,6 +12,6 @@ console.info('Getting latest stable version of node...')
 getLatest(function(err, latest) {
   assert.ifError(err)
   var current = process.versions.node
-  assert.equal(current, latest, "It saddens me to inform you that " + current + " is not the latest stable version of node.\n\n The latest stable version is " + latest)
+  assert.equal(current, latest, "It saddens me to inform you that " + current + " is not the latest stable version of node.\n\nThe latest stable version is " + latest + "\n\nGo to http://nodejs.org/download/ for the latest version.\nAlternatively, use one of: nave, nvm or n.")
   console.info('\nThis is great! You are using the latest stable version of node: ' + current)
 })
