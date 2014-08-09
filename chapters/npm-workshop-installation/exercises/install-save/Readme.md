@@ -35,7 +35,7 @@ version installed and your package.json will be updated accordingly.
 
 Specify 'once' as a dependency in the current package.json.
 
-Run `verify` to proceed!
+Run `npm-tutor verify` to proceed!
 
 ## Conditions
 

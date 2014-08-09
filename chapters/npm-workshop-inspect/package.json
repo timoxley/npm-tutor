@@ -1,15 +1,8 @@
 {
   "name": "npm-workshop-dependencies",
   "version": "0.0.0",
-  "description": "visualising node_modules: learn how dependencies work",
+  "description": "visualising node_modules",
   "main": "index.js",
-  "bin": {
-    "helpme": "help.js",
-    "self": "commands/self",
-    "verify": "commands/verify",
-    "chapter-reset": "commands/restart",
-    "chapter-test": "commands/test"
-  },
   "exercises": [
     "exercises/ls",
     "exercises/ls-json",
@@ -21,9 +14,6 @@
     "cpr": "^0.3.0",
     "mkdirp": "^0.5.0",
     "workshop-assertion-message": "*"
-  },
-  "scripts": {
-    "postinstall": "node setup.js && node help.js"
   },
   "author": "Tim Oxley",
   "license": "ISC"

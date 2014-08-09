@@ -10,7 +10,7 @@ Run install with the `--save-prefix` to install a package with a particular pref
 
 Alter the semver range in your package.json for the `once` module to be **greater than or equal to** the current latest version.
 
-Run `verify` to proceed!
+Run `npm-tutor verify` to proceed!
 
 ## Conditions
 

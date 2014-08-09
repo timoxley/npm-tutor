@@ -2,7 +2,7 @@
 
 What is the lowest valid version of `lru-cache` in `minimatch@0.3.0`?
 
-`verify <x.y.z>` to proceed.
+`npm-tutor verify <x.y.z>` to proceed.
 
 ## Hints
 

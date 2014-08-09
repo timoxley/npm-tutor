@@ -14,7 +14,7 @@ From the following modules, find the one with the most releases:
 * commander
 * minimist
 
-`verify <package-with-most-releases> <how-many>
+`npm-tutor verify <package-with-most-releases> <how-many>
 
 ## Hint
 

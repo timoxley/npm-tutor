@@ -3,7 +3,7 @@
 What is the lowest **invalid** version of `minimatch` in `glob@4.0.3`
 which is **greater than `minimatch@0.3.0`**?
 
-`verify <x.y.z>` to proceed.
+`npm-tutor verify <x.y.z>` to proceed.
 
 ## Hints
 

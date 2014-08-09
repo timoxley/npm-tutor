@@ -9,7 +9,7 @@ process.on('uncaughtException', require('workshop-assertion-message'));
 
 var submission = process.argv[2]
 var dir = path.join(process.env['WORKSHOP_WORKING_DIR'], 'npmls')
-assert.ok(submission, 'verify expects a version number\n e.g. `verify 1.2.3`')
+assert.ok(submission, 'verify expects a version number\n e.g. `npm-tutor verify 1.2.3`')
 
 submission = submission.trim()
 

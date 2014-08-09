@@ -43,7 +43,7 @@ module configuration.
 Remove any node_modules in the `./prune` directory and run
 `npm install` to test your theory.
 
-Run `verify` to proceed (node_modules will be wiped).
+Run `npm-tutor verify` to proceed (node_modules will be wiped).
 
 ## Conditions
 

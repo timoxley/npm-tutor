@@ -30,10 +30,10 @@ npmroot
 Where would `once` be installed to?
 
 ```
-verify <path/to/node_modules>
+npm-tutor verify <path/to/node_modules>
 ```
 
-e.g. `verify ./npmroot/d/node_modules`
+e.g. `npm-tutor verify ./npmroot/d/node_modules`
 
 ## Hints
 

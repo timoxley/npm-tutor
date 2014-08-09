@@ -6,7 +6,7 @@ This workshop requires the latest stable version of node.
 
 Update to the latest stable version of node!
 
-Run `verify` to verify you are running the latest version.
+Run `npm-tutor verify` to verify you are running the latest version.
 
 ## Hint
 

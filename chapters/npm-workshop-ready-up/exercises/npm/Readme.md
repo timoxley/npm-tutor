@@ -16,7 +16,7 @@ npm install -g npm
 This will update you to a prerelease version of npm! We want latest
 stable. `npm install -g npm`.
 
-Run `verify` to verify you are running the latest version.
+Run `npm-tutor verify` to verify you are running the latest version.
 
 ## Hints
 

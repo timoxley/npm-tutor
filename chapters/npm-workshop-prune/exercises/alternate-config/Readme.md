@@ -36,7 +36,7 @@ From the `./prune` directory:
 valid, package hierarchy (i.e. no extraneous packages or missing 
 dependencies).
 
-Run `verify` to proceed.
+Run `npm-tutor verify` to proceed.
 
 ## Conditions
 

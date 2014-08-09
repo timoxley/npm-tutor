@@ -3,7 +3,7 @@
 Use `npm install` to install the `duplexer2` module into the directory you
 started this workshop in.
 
-Once you have done this, run `verify` to proceed!
+Once you have done this, run `npm-tutor verify` to proceed!
 
 ## Tips
 

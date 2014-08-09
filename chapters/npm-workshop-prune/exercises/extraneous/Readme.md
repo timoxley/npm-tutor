@@ -8,4 +8,4 @@ the semver range for any unfulfilled dependency.
 Create a situation whereby running `npm ls` in the current directory
 will report that there is at least one extraneous package.
 
-Run `verify` to proceed.
+Run `npm-tutor verify` to proceed.

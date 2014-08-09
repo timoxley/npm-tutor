@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-discovery",
   "version": "0.0.0",
-  "description": "package discovery: find packages",
+  "description": "package discovery",
   "main": "index.js",
   "exercises": [
     "exercises/search",
@@ -10,9 +10,6 @@
   "dependencies": {
     "split2": "^0.1.2",
     "workshop-assertion-message": "*"
-  },
-  "scripts": {
-    "postinstall": "node ./help.js"
   },
   "author": "Tim Oxley",
   "license": "ISC"

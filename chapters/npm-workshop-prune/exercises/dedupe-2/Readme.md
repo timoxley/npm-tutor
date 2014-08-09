@@ -14,5 +14,5 @@ From the `./dedupe` directory:
 Which previously deduped package is no longer deduped?
 
 ```
-verify <package-name>
+npm-tutor verify <package-name>
 ```

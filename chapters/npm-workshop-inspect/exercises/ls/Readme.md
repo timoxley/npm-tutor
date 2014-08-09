@@ -7,7 +7,7 @@ From the `./npmls` directory:
 Which version of `string_decoder` is installed within `through2`?
 
 ```
-verify <x.y.z>
+npm-tutor verify <x.y.z>
 ```
 
 ## Hint

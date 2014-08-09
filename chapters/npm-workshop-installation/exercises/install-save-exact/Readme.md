@@ -22,7 +22,7 @@ along with `--save`.
 Install the latest version of `request` to your package.json, ensuring
 only that specific version will be installed.
 
-Run `verify` to proceed!
+Run `npm-tutor verify` to proceed!
 
 ## Conditions
 

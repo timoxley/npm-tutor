@@ -5,7 +5,7 @@ prepare for this now by making sure we're registered npm.
 
 ## Task
 
-Make sure you're registered and logged into npm, then run `verify`.
+Make sure you're registered and logged into npm, then run `npm-tutor verify`.
 
 ## Hints
 

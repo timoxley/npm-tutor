@@ -42,7 +42,7 @@ npm install bl
 To proceed:
 
 ```
-verify "I'm happy."
+npm-tutor verify "I'm happy."
 ```
 
 ## Tips

@@ -24,7 +24,7 @@ dependencies.
 
 Save `tape` as a development dependency.
 
-Run `verify` to proceed!
+Run `npm-tutor verify` to proceed!
 
 ## Conditions
 

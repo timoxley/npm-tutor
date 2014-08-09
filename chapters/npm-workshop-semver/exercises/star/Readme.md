@@ -2,7 +2,7 @@
 
 What is the lowest valid version of `debug` in `mocha@1.20.1`?
 
-`verify <x.y.z>` to proceed.
+`npm-tutor verify <x.y.z>` to proceed.
 
 ## Hints
 

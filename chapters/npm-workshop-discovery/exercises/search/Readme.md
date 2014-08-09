@@ -6,7 +6,7 @@ A user on the #node.js IRC channel is asking if there are any modules to parse c
 
 Be helpful and find a module on npm which looks like it will do this!
 
-`verify <package-name>` to verify.
+`npm-tutor verify <package-name>` to verify.
 
 ## Hint
 

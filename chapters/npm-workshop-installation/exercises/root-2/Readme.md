@@ -6,7 +6,7 @@ Modify the items in `npmroot` such that executing `npm install once` in `npmroot
 You may add or remove anything except the `npmroot/a/b/c` directories.
 
 ```
-verify
+npm-tutor verify
 ```
 
 ## Hints

@@ -7,10 +7,10 @@ A copy of through2 is installed in the `./npmls` directory.
 Which semver range is the particular version of `string_decoder` being installed **from** within `through2`?
 
 ```
-verify <semver-range>
+npm-tutor verify <semver-range>
 ```
 
-e.g. "verify ~2.2.1"
+e.g. "npm-tutor verify ~2.2.1"
 
 ## Hint
 

@@ -64,10 +64,10 @@ How many packages were **moved** to the `node_modules` directory in
 `./dedupe`?
 
 ```
-verify <Number>
+npm-tutor verify <Number>
 ```
 
-e.g. `verify 5`
+e.g. `npm-tutor verify 5`
 
 ## Hints
 

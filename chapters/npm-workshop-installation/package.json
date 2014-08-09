@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-dependencies",
   "version": "0.0.0",
-  "description": "installing dependencies: learn how dependencies work",
+  "description": "installing dependencies",
   "main": "index.js",
   "exercises": [
     "exercises/install",
@@ -17,9 +17,6 @@
     "assertf": "^1.0.0",
     "bl": "^0.8.2",
     "workshop-assertion-message": "*"
-  },
-  "scripts": {
-    "postinstall": "node setup.js && node help.js"
   },
   "author": "Tim Oxley",
   "license": "ISC"

@@ -18,10 +18,10 @@ just pick one, it doesn't matter.
 
 
 ```
-verify <package-name>
+npm-tutor verify <package-name>
 ```
 
-e.g. "verify boganipsum"
+e.g. "npm-tutor verify boganipsum"
 
 ## Hints
 

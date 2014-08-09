@@ -8,7 +8,7 @@
 Use a single npm command to remove the dependency located in the
 `./uninstall` directory.
 
-Run `verify` to proceed.
+Run `npm-tutor verify` to proceed.
 
 ## Hints
 

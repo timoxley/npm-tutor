@@ -1,7 +1,7 @@
 {
   "name": "npm-workshop-workflow-dependencies",
   "version": "0.0.0",
-  "description": "making packages - dependencies: make npm update package.jsons",
+  "description": "package.json management",
   "main": "index.js",
   "exercises": [
     "exercises/install-save",

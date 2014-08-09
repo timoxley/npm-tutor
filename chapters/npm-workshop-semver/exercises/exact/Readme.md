@@ -8,7 +8,7 @@ semver along the way.
 
 Is `github-url-from-git@1.1.2` a valid dependency for `npm@1.4.17`?
 
-`verify <yes|no>` to proceed.
+`npm-tutor verify <yes|no>` to proceed.
 
 ## Hint
 

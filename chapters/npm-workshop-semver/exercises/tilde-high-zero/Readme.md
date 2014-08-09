@@ -3,7 +3,7 @@
 What is the lowest invalid version of `forever-agent` in
 `request@2.20.0` which is **greater than `forever-agent@0.3.0`**?
 
-`verify <x.y.z>` to proceed.
+`npm-tutor verify <x.y.z>` to proceed.
 
 ## Hint
 

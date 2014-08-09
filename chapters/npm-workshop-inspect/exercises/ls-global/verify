@@ -11,7 +11,7 @@ process.on('uncaughtException', require('workshop-assertion-message'));
 
 var submission = process.argv[2]
 
-assert.ok(submission, 'verify expects a package name\n e.g. `verify commander`')
+assert.ok(submission, 'verify expects a package name\n e.g. `npm-tutor verify commander`')
 
 submission = submission.trim()
 

@@ -12,7 +12,7 @@ extraneous packages from your dependency tree.
 
 Remove any extraneous dependencies using `npm prune`.
 
-Run `verify` to proceed!
+Run `npm-tutor verify` to proceed!
 
 ## Conditions
 
