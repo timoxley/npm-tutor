@@ -8,7 +8,7 @@ var assert = require('assertf')
 
 process.on('uncaughtException', require('workshop-assertion-message'));
 
-var dir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'uninstall')
+var dir = path.resolve(process.cwd(), 'uninstall')
 var target = path.resolve(dir, 'node_modules/bower')
 var pkg = require(path.resolve(dir, 'package.json'))
 

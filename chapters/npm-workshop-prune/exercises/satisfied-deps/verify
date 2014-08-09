@@ -11,7 +11,7 @@ var rimraf = require('rimraf')
 
 process.on('uncaughtException', require('workshop-assertion-message'));
 
-var pruneDir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'prune')
+var pruneDir = path.resolve(process.cwd(), 'prune')
 
 var oldPkgDir = path.resolve(__dirname, '../../bootstrap/prune/')
 

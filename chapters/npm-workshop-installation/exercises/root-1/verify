@@ -12,7 +12,7 @@ submission = path.resolve(process.cwd(), submission)
 assert(submission, 'Uh, which path will it install into?')
 submission = submission.trim()
 
-var root = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'npmroot')
+var root = path.resolve(process.cwd(), 'npmroot')
 var answer = path.resolve(root, 'a/b/node_modules')
 
 exec('npm root', {

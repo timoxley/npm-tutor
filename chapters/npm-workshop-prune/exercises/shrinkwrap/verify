@@ -10,7 +10,7 @@ var rimraf = require('rimraf')
 var semver = require('semver')
 process.on('uncaughtException', require('workshop-assertion-message'));
 
-var shrinkwrapDir = path.resolve(process.env['WORKSHOP_WORKING_DIR'], 'shrinkwrap')
+var shrinkwrapDir = path.resolve(process.cwd(), 'shrinkwrap')
 
 var oldPkg = require(path.resolve(__dirname, '../../bootstrap/shrinkwrap/package.json'))
 var newPkg = require(path.resolve(shrinkwrapDir, 'package.json'))
