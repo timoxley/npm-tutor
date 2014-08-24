@@ -62,7 +62,7 @@ function done(err, results) {
 
   assert.equal(submitted.name, typicalInit.name, 'Did you accept the npm init defaults?\n"name" should be %s.',  typicalInit.name)
 
-  assert.equal(submitted.author, typicalInit.author, 'Author does not look right!\n"author" should be %s. Did you re-run npm init after updating your npm config?',  typicalInit.author)
+  assert(!submitted.author.indexOf(typicalInit.author), 'Author does not look right!\n"author" should be %s. Did you re-run npm init after updating your npm config?',  typicalInit.author)
 
   console.info('\nGood work! You set your author information to:\n%s', typicalInit.author)
 
