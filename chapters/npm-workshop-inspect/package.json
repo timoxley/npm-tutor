@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "description": "visualising node_modules",
   "main": "index.js",
-  "exercises": [
-    "exercises/ls",
-    "exercises/ls-json",
-    "exercises/ls-global"
-  ],
+  "exercises": {
+    "npm ls": "exercises/ls",
+    "npm ls --json": "exercises/ls-json",
+    "npm ls --json --global": "exercises/ls-global"
+  },
   "dependencies": {
     "assertf": "^1.0.0",
     "bl": "^0.8.2",

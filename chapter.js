@@ -11,10 +11,27 @@ var shell = require('shelljs')
 module.exports = function(pkgDir) {
   var pkg = require(path.resolve(pkgDir, 'package.json'))
   var shop = adventure(pkg.description);
-  pkg.exercises.map(function(exercise) {
-    var dir = path.resolve(pkgDir, exercise)
+  var exercises = []
+  if (pkg.exercises && !Array.isArray(pkg.exercises)) {
+    exercises = Object.keys(pkg.exercises).map(function(key) {
+      return {
+        name: key,
+        dir: path.resolve(pkgDir, pkg.exercises[key])
+      }
+    })
+  } else {
+    exercises = exercises.map(function() {
+      return {
+        name: path.basename(dir),
+        dir: path.resolve(pkgDir, exercise)
+      }
+    })
+  }
+
+  exercises.map(function(exercise) {
+    var dir = exercise.dir
     return {
-      name: path.basename(exercise),
+      name: exercise.name,
       pkgDir: pkgDir,
       dir: dir,
       problem: fs.readFileSync(path.resolve(dir, 'Readme.md')),
@@ -27,7 +44,8 @@ module.exports = function(pkgDir) {
         })
       }
     }
-  }).forEach(function(exercise) {
+  })
+  .forEach(function(exercise) {
     shop.add(exercise.name, function() { return exercise })
   })
   return shop
