@@ -1,8 +1,8 @@
 # npm ls
 
-`npm ls` can also produce json output which includes more contextual
-information about where dependencies came from and which semver ranges
-they are satisfying.
+`npm ls` can also produce JSON output which is easily machine parseable
+and includes more contextual information about where dependencies came
+from and which semver ranges they are satisfying.
 
 ## Task
 
