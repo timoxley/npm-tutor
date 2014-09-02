@@ -10,7 +10,7 @@ extraneous packages from your dependency tree.
 
 ## Task
 
-Remove any extraneous dependencies using `npm prune`.
+Remove any extraneous dependencies from the current directory using `npm prune`.
 
 Run `npm-tutor verify` to proceed!
 

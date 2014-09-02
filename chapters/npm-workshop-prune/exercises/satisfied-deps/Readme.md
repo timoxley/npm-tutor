@@ -1,4 +1,4 @@
-# Satifying dependencies
+# Satifying Dependencies
 
 Installing a package can impact which version gets used by seemingly
 unrelated dependencies deeper in the `node_modules` hierarchy.
