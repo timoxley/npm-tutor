@@ -16,14 +16,14 @@
   },
   "author": "Tim Oxley <secoif@gmail.com>",
   "license": "MIT",
-  "exercises": [
-    "chapters/npm-workshop-ready-up",
-    "chapters/npm-workshop-making-packages-init",
-    "chapters/npm-workshop-installation",
-    "chapters/npm-workshop-semver",
-    "chapters/npm-workshop-inspect",
-    "chapters/npm-workshop-prune"
-  ],
+  "exercises": {
+    "Ready Up": "chapters/npm-workshop-ready-up",
+    "Making Packages": "chapters/npm-workshop-making-packages-init",
+    "Installing Packages": "chapters/npm-workshop-installation",
+    "Semver Quiz": "chapters/npm-workshop-semver",
+    "Inspecting node_modules": "chapters/npm-workshop-inspect",
+    "Understanding the Install Algorithm": "chapters/npm-workshop-prune"
+  },
   "dependencies": {
     "adventure": "^2.6.0",
     "afterfn": "^2.0.0",

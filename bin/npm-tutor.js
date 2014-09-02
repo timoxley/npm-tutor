@@ -76,9 +76,12 @@ shop.execute = function(args) {
 }
 
 // gather all chapters as modules
-var chapters = pkg.exercises.map(function(chapter) {
-  var dir = path.resolve(__dirname, '..', chapter)
-  return require(dir)
+var chapters = Object.keys(pkg.exercises).map(function(name) {
+  var chapterDir = pkg.exercises[name]
+  var dir = path.resolve(__dirname, '..', chapterDir)
+  var chapter = require(dir)
+  chapter.name = name
+  return chapter
 })
 
 // add to shop

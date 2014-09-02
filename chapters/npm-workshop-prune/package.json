@@ -3,16 +3,16 @@
   "version": "0.0.0",
   "description": "install algorithm",
   "main": "index.js",
-  "exercises": [
-    "exercises/extraneous",
-    "exercises/prune",
-    "exercises/alternate-config",
-    "exercises/satisfied-deps",
-    "exercises/update",
-    "exercises/shrinkwrap",
-    "exercises/dedupe-1",
-    "exercises/dedupe-2"
-  ],
+  "exercises": {
+    "Extraneous Packages": "exercises/extraneous",
+    "The Danger of Extraneous Packages": "exercises/prune",
+    "Alternate Depedency Configurations": "exercises/alternate-config",
+    "Satisfying Dependencies": "exercises/satisfied-deps",
+    "Updating Dependencies": "exercises/update",
+    "Locking Down Semver": "exercises/shrinkwrap",
+    "Deduplication": "exercises/dedupe-1",
+    "Deduplication Limits": "exercises/dedupe-2"
+  },
   "dependencies": {
     "assertf": "^1.0.0",
     "mkdirp": "^0.5.0",
