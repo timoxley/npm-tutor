@@ -46,11 +46,9 @@
     "terminal-menu": "^0.3.2",
     "through2": "^0.5.1",
     "wordwrap": "0.0.2",
-    "workshop-assertion-message": "*",
     "xtend": "^3.0.0"
   },
   "devDependencies": {
-    "rimraf": "^2.2.8",
     "tape": "^2.13.3"
   },
   "bundleDependencies": [
